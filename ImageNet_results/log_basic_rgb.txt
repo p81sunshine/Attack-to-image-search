@@ -1,0 +1,1656 @@
+{'dataset': 'imagenet', 'save': 'black_results_imagenet_rgb', 'attack': 'black', 'numimg': 50, 'maxiter': 2000, 'print_every': 1, 'early_stop_iters': 0, 'firstimg': 0, 'binary_steps': 2, 'init_const': 100, 'use_zvalue': False, 'untargeted': True, 'reset_adam': True, 'use_resize': True, 'adam_beta1': 0.9, 'adam_beta2': 0.999, 'seed': 1216, 'solver': 'adam', 'save_ckpts': 'best_modifier_imagenet', 'load_ckpt': './best_modifier_imagenet/best_modifier_img0.npy', 'start_iter': 0, 'init_size': 32, 'uniform': False, 'method': 'tanh', 'gpu': '2', 'hash': 10, 'batch': 256, 'start_idx': 0, 'dct': False, 'lr': 0.01, 'transform': 'centrol_crop', 'dist_metrics': 'pdist', 'bits': 8, 'factor': 4, 'maximize': 'minus', 'htype': 'phash', 'inception': False, 'use_tanh': True}
+Loading model imagenet
+Device mapping:
+gradientUsing 50 test images
+early stop: 200
+creating save_ckpts  best_modifier_imagenet
+use tanh True
+method is  tanh
+batch size  256
+resize  32
+use important  True
+load ckpt ./best_modifier_imagenet/best_modifier_img0.npy
+use dct False
+dist metrics pdist
+Using checkpint ./best_modifier_imagenet/best_modifier_img0.npy
+self.newimg shape for 4d verification Tensor("add_1:0", shape=(?, 288, 288, 3), dtype=float32)
+loss2  Tensor("Reshape_3:0", shape=(?,), dtype=float32)
+Using adam solver
+Generate data
+Done...
+for image id  0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img0.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img0.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0001674, loss1 = 0, loss2 = 0.0001674
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0001674, loss1 = 0, loss2 = 0.0001674
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img0.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0001674, loss1 = 0, loss2 = 0.0001674
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0001674, loss1 = 0, loss2 = 0.0001674
+Device mapping:
+import_1/Const_169: (Const):Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  1.687474186161603
+l2_distortion between inputs and adv_current  1.687474186161603
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.0033828599848296738
+normalized l2 between inputs and adv_current  0.0033828599848296738
+perceptual metrics distance between adv and img 0.00016740359
+perceptual metrics distance between adv_current and img 0.00016740359
+perceptual hash difference is  10
+Saving to id0_differ10_True_l21.69_pdistance0.00016740358842071146
+[STATS][L1] total = 1, id = 0, time = 33.002, success = True, const = 100.000000, hash_avg=10.00000, distortion = 1.68747, success_rate = 1.000, l2_avg=1.68747, p_avg=0.00016740358842071146, iteration_avg=1.0
+overall average hash  10.0
+overall average l2  1.687474186161603
+overal average perceptual distance  0.00016740358842071146
+overal average iterations  1.0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img1.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img1.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.00065923, loss1 = 0, loss2 = 0.00065923
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.00065923, loss1 = 0, loss2 = 0.00065923
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img1.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.00065923, loss1 = 0, loss2 = 0.00065923
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.00065923, loss1 = 0, loss2 = 0.00065923
+host/replica:0/task:0/device:CPU:0
+Device mapping:
+import_2/transpose_56/perm: (CoEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  4.124842897114941
+l2_distortion between inputs and adv_current  4.124842897114941
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.008269024850743843
+normalized l2 between inputs and adv_current  0.008269024850743843
+perceptual metrics distance between adv and img 0.00065923476
+perceptual metrics distance between adv_current and img 0.00065923476
+perceptual hash difference is  10
+Saving to id1_differ10_True_l24.12_pdistance0.0006592347635887563
+[STATS][L1] total = 2, id = 1, time = 27.902, success = True, const = 100.000000, hash_avg=10.00000, distortion = 4.12484, success_rate = 1.000, l2_avg=2.90616, p_avg=0.0004133191760047339, iteration_avg=1.0
+overall average hash  10.0
+overall average l2  2.9061585416382716
+overal average perceptual distance  0.0004133191760047339
+overal average iterations  1.0
+import_2/Cofor image id  2
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img2.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img2.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.016752, loss1 = 0, loss2 = 0.016752
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.016752, loss1 = 0, loss2 = 0.016752
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img2.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.016752, loss1 = 0, loss2 = 0.016752
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.016752, loss1 = 0, loss2 = 0.016752
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  11.565097973761596
+l2_distortion between inputs and adv_current  11.565097973761596
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.023184418154012683
+normalized l2 between inputs and adv_current  0.023184418154012683
+perceptual metrics distance between adv and img 0.016752047
+perceptual metrics distance between adv_current and img 0.016752047
+perceptual hash difference is  10
+Saving to id2_differ10_True_l211.57_pdistance0.016752047464251518
+[STATS][L1] total = 3, id = 2, time = 22.287, success = True, const = 100.000000, hash_avg=10.00000, distortion = 11.56510, success_rate = 1.000, l2_avg=5.79247, p_avg=0.005859561938753662, iteration_avg=1.0
+overall average hash  10.0
+overall average l2  5.79247168567938
+overal average perceptual distance  0.005859561938753662
+overal average iterations  1.0
+host/replica:0/task:0/device:CPU:0
+import_3/Mean_5/reduction_indices: (Cofor image id  3
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img3.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img3.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0059272, loss1 = 0, loss2 = 0.0059272
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0059272, loss1 = 0, loss2 = 0.0059272
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img3.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0059272, loss1 = 0, loss2 = 0.0059272
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0059272, loss1 = 0, loss2 = 0.0059272
+Device mapping:
+import_4/Const_176: (ConstEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  12.376338909792356
+l2_distortion between inputs and adv_current  12.376338909792356
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.024810703476217555
+normalized l2 between inputs and adv_current  0.024810703476217555
+perceptual metrics distance between adv and img 0.005927244
+perceptual metrics distance between adv_current and img 0.005927244
+perceptual hash difference is  10
+Saving to id3_differ10_True_l212.38_pdistance0.005927244201302528
+[STATS][L1] total = 4, id = 3, time = 28.604, success = True, const = 100.000000, hash_avg=10.00000, distortion = 12.37634, success_rate = 1.000, l2_avg=7.43844, p_avg=0.005876482504390879, iteration_avg=1.0
+overall average hash  10.0
+overall average l2  7.438438491707624
+overal average perceptual distance  0.005876482504390879
+overal average iterations  1.0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img4.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img4.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0029672, loss1 = 0, loss2 = 0.0029672
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0029672, loss1 = 0, loss2 = 0.0029672
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img4.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0029672, loss1 = 0, loss2 = 0.0029672
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0029672, loss1 = 0, loss2 = 0.0029672
+a:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  6.856916584655575
+l2_distortion between inputs and adv_current  6.856916584655575
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.013745981374867032
+normalized l2 between inputs and adv_current  0.013745981374867032
+perceptual metrics distance between adv and img 0.0029671697
+perceptual metrics distance between adv_current and img 0.0029671697
+perceptual hash difference is  10
+Saving to id4_differ10_True_l26.86_pdistance0.002967169741168618
+[STATS][L1] total = 5, id = 4, time = 24.855, success = True, const = 100.000000, hash_avg=10.00000, distortion = 6.85692, success_rate = 1.000, l2_avg=7.32213, p_avg=0.005294619951746427, iteration_avg=1.0
+overall average hash  10.0
+overall average l2  7.322134110297213
+overal average perceptual distance  0.005294619951746427
+overal average iterations  1.0
+ask:0/device:CPU:0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img5.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img5.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.00274, loss1 = 0, loss2 = 0.00274
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.00274, loss1 = 0, loss2 = 0.00274
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img5.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.00274, loss1 = 0, loss2 = 0.00274
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.00274, loss1 = 0, loss2 = 0.00274
+
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  6.186867294630659
+l2_distortion between inputs and adv_current  6.186867294630659
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.012402741312484384
+normalized l2 between inputs and adv_current  0.012402741312484384
+perceptual metrics distance between adv and img 0.002740049
+perceptual metrics distance between adv_current and img 0.002740049
+perceptual hash difference is  10
+Saving to id5_differ10_True_l26.19_pdistance0.002740049036219716
+[STATS][L1] total = 6, id = 5, time = 24.261, success = True, const = 100.000000, hash_avg=10.00000, distortion = 6.18687, success_rate = 1.000, l2_avg=7.13292, p_avg=0.004868858132491975, iteration_avg=1.0
+overall average hash  10.0
+overall average l2  7.1329229743527875
+overal average perceptual distance  0.004868858132491975
+overal average iterations  1.0
+0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img6.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img6.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0017408, loss1 = 0, loss2 = 0.0017408
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0017408, loss1 = 0, loss2 = 0.0017408
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img6.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0017408, loss1 = 0, loss2 = 0.0017408
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0017408, loss1 = 0, loss2 = 0.0017408
+ica:0/task:0/device:CPU:0
+Device mapping:
+importEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  5.112226182702551
+l2_distortion between inputs and adv_current  5.112226182702551
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.010248420703963786
+normalized l2 between inputs and adv_current  0.010248420703963786
+perceptual metrics distance between adv and img 0.0017408365
+perceptual metrics distance between adv_current and img 0.0017408365
+perceptual hash difference is  10
+Saving to id6_differ10_True_l25.11_pdistance0.001740836538374424
+[STATS][L1] total = 7, id = 6, time = 22.440, success = True, const = 100.000000, hash_avg=10.00000, distortion = 5.11223, success_rate = 1.000, l2_avg=6.84425, p_avg=0.004421997904760896, iteration_avg=1.0
+overall average hash  10.0
+overall average l2  6.844252004117039
+overal average perceptual distance  0.004421997904760896
+overal average iterations  1.0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img7.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img7.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 19.745, loss1 = 19.738, loss2 = 0.007602
+[STATS][L2] iter = 1, cost = 256, time = 15.289, size = (1, 32, 32, 3), loss = 19.745, loss1 = 19.738, loss2 = 0.0076947
+[STATS][L2] iter = 2, cost = 512, time = 25.854, size = (1, 32, 32, 3), loss = 19.745, loss1 = 19.738, loss2 = 0.0077808
+[STATS][L2] iter = 3, cost = 768, time = 37.164, size = (1, 32, 32, 3), loss = 0.0078174, loss1 = 0, loss2 = 0.0078174
+[STATS][L3](First valid attack found!) iter = 3, cost = 1024, time = 37.164, size = (1, 32, 32, 3), loss = 0.0078174, loss1 = 0, loss2 = 0.0078174
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img7.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 9.8764, loss1 = 9.8688, loss2 = 0.007602
+[STATS][L2] iter = 1, cost = 256, time = 14.270, size = (1, 32, 32, 3), loss = 9.8764, loss1 = 9.8688, loss2 = 0.0076825
+[STATS][L2] iter = 2, cost = 512, time = 24.658, size = (1, 32, 32, 3), loss = 9.8765, loss1 = 9.8688, loss2 = 0.0076959
+[STATS][L2] iter = 3, cost = 768, time = 35.363, size = (1, 32, 32, 3), loss = 0.0077315, loss1 = 0, loss2 = 0.0077315
+[STATS][L3](Attack found!) iter = 3, cost = 1024, time = 35.363, size = (1, 32, 32, 3), loss = 0.0077315, loss1 = 0, loss2 = 0.0077315
+alhost/replica:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  11.525489686977872
+l2_distortion between inputs and adv_current  11.525489686977872
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.023105015879579617
+normalized l2 between inputs and adv_current  0.023105015879579617
+perceptual metrics distance between adv and img 0.0077315504
+perceptual metrics distance between adv_current and img 0.0077315504
+perceptual hash difference is  10
+Saving to id7_differ10_True_l211.53_pdistance0.007731550373136997
+[STATS][L1] total = 8, id = 7, time = 95.923, success = True, const = 50.000000, hash_avg=10.00000, distortion = 11.52549, success_rate = 1.000, l2_avg=7.42941, p_avg=0.004835691963307909, iteration_avg=1.375
+overall average hash  10.0
+overall average l2  7.429406714474643
+overal average perceptual distance  0.004835691963307909
+overal average iterations  1.375
+
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img8.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img8.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.03812, loss1 = 0, loss2 = 0.03812
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.03812, loss1 = 0, loss2 = 0.03812
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img8.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.03812, loss1 = 0, loss2 = 0.03812
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.03812, loss1 = 0, loss2 = 0.03812
+ica:0/task:0/device:CPU:0
+Device mapping:
+import_9/split_29/split_dim: (Const)Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  12.34124950518611
+l2_distortion between inputs and adv_current  12.34124950518611
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.02474036015262339
+normalized l2 between inputs and adv_current  0.02474036015262339
+perceptual metrics distance between adv and img 0.03811965
+perceptual metrics distance between adv_current and img 0.03811965
+perceptual hash difference is  10
+Saving to id8_differ10_True_l212.34_pdistance0.03811965137720108
+[STATS][L1] total = 9, id = 8, time = 21.948, success = True, const = 100.000000, hash_avg=10.00000, distortion = 12.34125, success_rate = 1.000, l2_avg=7.97517, p_avg=0.008533909675962705, iteration_avg=1.3333333333333333
+overall average hash  10.0
+overall average l2  7.975167024553695
+overal average perceptual distance  0.008533909675962705
+overal average iterations  1.3333333333333333
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img9.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img9.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.00072713, loss1 = 0, loss2 = 0.00072713
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.00072713, loss1 = 0, loss2 = 0.00072713
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img9.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.00072713, loss1 = 0, loss2 = 0.00072713
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.00072713, loss1 = 0, loss2 = 0.00072713
+:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  3.8933100319261182
+l2_distortion between inputs and adv_current  3.8933100319261182
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.007804873593650051
+normalized l2 between inputs and adv_current  0.007804873593650051
+perceptual metrics distance between adv and img 0.0007271281
+perceptual metrics distance between adv_current and img 0.0007271281
+perceptual hash difference is  10
+Saving to id9_differ10_True_l23.89_pdistance0.0007271281210705638
+[STATS][L1] total = 10, id = 9, time = 25.024, success = True, const = 100.000000, hash_avg=10.00000, distortion = 3.89331, success_rate = 1.000, l2_avg=7.56698, p_avg=0.007753231520473492, iteration_avg=1.3
+overall average hash  10.0
+overall average l2  7.5669813252909375
+overal average perceptual distance  0.007753231520473492
+overal average iterations  1.3
+t/replica:0/task:0/device:CPU:0
+impofor image id  10
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img10.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img10.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0023754, loss1 = 0, loss2 = 0.0023754
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0023754, loss1 = 0, loss2 = 0.0023754
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img10.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0023754, loss1 = 0, loss2 = 0.0023754
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0023754, loss1 = 0, loss2 = 0.0023754
+Device mapping:
+import_11/Mean_6/reduction_indices: (CEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  5.482708861000634
+l2_distortion between inputs and adv_current  5.482708861000634
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.010991123044399522
+normalized l2 between inputs and adv_current  0.010991123044399522
+perceptual metrics distance between adv and img 0.002375415
+perceptual metrics distance between adv_current and img 0.002375415
+perceptual hash difference is  10
+Saving to id10_differ10_True_l25.48_pdistance0.0023754150606691837
+[STATS][L1] total = 11, id = 10, time = 21.492, success = True, const = 100.000000, hash_avg=10.00000, distortion = 5.48271, success_rate = 1.000, l2_avg=7.37750, p_avg=0.007264339115036736, iteration_avg=1.2727272727272727
+overall average hash  10.0
+overall average l2  7.377502010355456
+overal average perceptual distance  0.007264339115036736
+overal average iterations  1.2727272727272727
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img11.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img11.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.003588, loss1 = 0, loss2 = 0.003588
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.003588, loss1 = 0, loss2 = 0.003588
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img11.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.003588, loss1 = 0, loss2 = 0.003588
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.003588, loss1 = 0, loss2 = 0.003588
+CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  6.570003137813628
+l2_distortion between inputs and adv_current  6.570003137813628
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.013170809306227027
+normalized l2 between inputs and adv_current  0.013170809306227027
+perceptual metrics distance between adv and img 0.0035880073
+perceptual metrics distance between adv_current and img 0.0035880073
+perceptual hash difference is  10
+Saving to id11_differ10_True_l26.57_pdistance0.0035880072973668575
+[STATS][L1] total = 12, id = 11, time = 21.326, success = True, const = 100.000000, hash_avg=10.00000, distortion = 6.57000, success_rate = 1.000, l2_avg=7.31021, p_avg=0.006957978130230913, iteration_avg=1.25
+overall average hash  10.0
+overall average l2  7.3102104376436365
+overal average perceptual distance  0.006957978130230913
+overal average iterations  1.25
+ice:CPU:0
+import_12/convolution_for image id  12
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img12.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img12.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0028955, loss1 = 0, loss2 = 0.0028955
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0028955, loss1 = 0, loss2 = 0.0028955
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img12.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0028955, loss1 = 0, loss2 = 0.0028955
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0028955, loss1 = 0, loss2 = 0.0028955
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  5.023917515588548
+l2_distortion between inputs and adv_current  5.023917515588548
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.010071389340317791
+normalized l2 between inputs and adv_current  0.010071389340317791
+perceptual metrics distance between adv and img 0.0028954856
+perceptual metrics distance between adv_current and img 0.0028954856
+perceptual hash difference is  12
+Saving to id12_differ12_True_l25.02_pdistance0.002895485609769821
+[STATS][L1] total = 13, id = 12, time = 21.134, success = True, const = 100.000000, hash_avg=10.15385, distortion = 5.02392, success_rate = 1.000, l2_avg=7.13434, p_avg=0.0066454787055800595, iteration_avg=1.2307692307692308
+overall average hash  10.153846153846153
+overall average l2  7.134341751331707
+overal average perceptual distance  0.0066454787055800595
+overal average iterations  1.2307692307692308
+:0/task:0/device:CPU:0
+imporfor image id  13
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img13.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img13.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0053923, loss1 = 0, loss2 = 0.0053923
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0053923, loss1 = 0, loss2 = 0.0053923
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img13.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0053923, loss1 = 0, loss2 = 0.0053923
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0053923, loss1 = 0, loss2 = 0.0053923
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  5.5206094246130695
+l2_distortion between inputs and adv_current  5.5206094246130695
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.01106710186594146
+normalized l2 between inputs and adv_current  0.01106710186594146
+perceptual metrics distance between adv and img 0.0053922595
+perceptual metrics distance between adv_current and img 0.0053922595
+perceptual hash difference is  10
+Saving to id13_differ10_True_l25.52_pdistance0.005392259452491999
+[STATS][L1] total = 14, id = 13, time = 21.580, success = True, const = 100.000000, hash_avg=10.14286, distortion = 5.52061, success_rate = 1.000, l2_avg=7.01908, p_avg=0.006555963044645198, iteration_avg=1.2142857142857142
+overall average hash  10.142857142857142
+overall average l2  7.01907515656609
+overal average perceptual distance  0.006555963044645198
+overal average iterations  1.2142857142857142
+task:0/device:CPU:0
+import_14/SparseToDense_10/default_value: (Const): /jofor image id  14
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img14.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img14.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 53.706, loss1 = 53.705, loss2 = 0.00091042
+[STATS][L2] iter = 1, cost = 256, time = 10.725, size = (1, 32, 32, 3), loss = 37.996, loss1 = 37.995, loss2 = 0.0010114
+[STATS][L2] iter = 2, cost = 512, time = 21.101, size = (1, 32, 32, 3), loss = 19.739, loss1 = 19.738, loss2 = 0.0010729
+[STATS][L2] iter = 3, cost = 768, time = 31.586, size = (1, 32, 32, 3), loss = 19.739, loss1 = 19.738, loss2 = 0.0011683
+[STATS][L2] iter = 4, cost = 1024, time = 42.182, size = (1, 32, 32, 3), loss = 0.0013017, loss1 = 0, loss2 = 0.0013017
+[STATS][L3](First valid attack found!) iter = 4, cost = 1280, time = 42.182, size = (1, 32, 32, 3), loss = 0.0013017, loss1 = 0, loss2 = 0.0013017
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img14.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 26.853, loss1 = 26.852, loss2 = 0.00091042
+[STATS][L2] iter = 1, cost = 256, time = 10.536, size = (1, 32, 32, 3), loss = 18.998, loss1 = 18.997, loss2 = 0.00099559
+[STATS][L2] iter = 2, cost = 512, time = 21.526, size = (1, 32, 32, 3), loss = 18.999, loss1 = 18.997, loss2 = 0.001097
+[STATS][L2] iter = 3, cost = 768, time = 31.516, size = (1, 32, 32, 3), loss = 9.87, loss1 = 9.8688, loss2 = 0.0012135
+[STATS][L2] iter = 4, cost = 1024, time = 43.291, size = (1, 32, 32, 3), loss = 0.001335, loss1 = 0, loss2 = 0.001335
+[STATS][L3](Attack found!) iter = 4, cost = 1280, time = 43.291, size = (1, 32, 32, 3), loss = 0.001335, loss1 = 0, loss2 = 0.001335
+b:localhost/replica:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  2.3840305487035574
+l2_distortion between inputs and adv_current  2.3840305487035574
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.004779238468924618
+normalized l2 between inputs and adv_current  0.004779238468924618
+perceptual metrics distance between adv and img 0.0013017431
+perceptual metrics distance between adv_current and img 0.0013017431
+perceptual hash difference is  10
+Saving to id14_differ10_True_l22.38_pdistance0.0013017430901527405
+[STATS][L1] total = 15, id = 14, time = 108.797, success = True, const = 100.000000, hash_avg=10.13333, distortion = 2.38403, success_rate = 1.000, l2_avg=6.71007, p_avg=0.006205681714345701, iteration_avg=1.4666666666666666
+overall average hash  10.133333333333333
+overall average l2  6.710072182708588
+overal average perceptual distance  0.006205681714345701
+overal average iterations  1.4666666666666666
+ica:0/task:0/device:CPU:0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img15.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img15.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 19.741, loss1 = 19.738, loss2 = 0.0031441
+[STATS][L2] iter = 1, cost = 256, time = 10.569, size = (1, 32, 32, 3), loss = 19.741, loss1 = 19.738, loss2 = 0.0031814
+[STATS][L2] iter = 2, cost = 512, time = 21.832, size = (1, 32, 32, 3), loss = 0.0032125, loss1 = 0, loss2 = 0.0032125
+[STATS][L3](First valid attack found!) iter = 2, cost = 768, time = 21.832, size = (1, 32, 32, 3), loss = 0.0032125, loss1 = 0, loss2 = 0.0032125
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img15.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 9.8719, loss1 = 9.8688, loss2 = 0.0031441
+[STATS][L2] iter = 1, cost = 256, time = 10.107, size = (1, 32, 32, 3), loss = 9.872, loss1 = 9.8688, loss2 = 0.0032187
+[STATS][L2] iter = 2, cost = 512, time = 20.896, size = (1, 32, 32, 3), loss = 0.0032999, loss1 = 0, loss2 = 0.0032999
+[STATS][L3](Attack found!) iter = 2, cost = 768, time = 20.896, size = (1, 32, 32, 3), loss = 0.0032999, loss1 = 0, loss2 = 0.0032999
+ocalhost/replica:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  7.076161116211597
+l2_distortion between inputs and adv_current  7.076161116211597
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.014185498351645584
+normalized l2 between inputs and adv_current  0.014185498351645584
+perceptual metrics distance between adv and img 0.0032124508
+perceptual metrics distance between adv_current and img 0.0032124508
+perceptual hash difference is  10
+Saving to id15_differ10_True_l27.08_pdistance0.003212450770661235
+[STATS][L1] total = 16, id = 15, time = 64.935, success = True, const = 100.000000, hash_avg=10.12500, distortion = 7.07616, success_rate = 1.000, l2_avg=6.73295, p_avg=0.006018604780365422, iteration_avg=1.5625
+overall average hash  10.125
+overall average l2  6.732952741052526
+overal average perceptual distance  0.006018604780365422
+overal average iterations  1.5625
+U:0
+import_16/Const_1for image id  16
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img16.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img16.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 19.752, loss1 = 19.738, loss2 = 0.014245
+[STATS][L2] iter = 1, cost = 256, time = 10.377, size = (1, 32, 32, 3), loss = 0.014527, loss1 = 0, loss2 = 0.014527
+[STATS][L3](First valid attack found!) iter = 1, cost = 512, time = 10.377, size = (1, 32, 32, 3), loss = 0.014527, loss1 = 0, loss2 = 0.014527
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img16.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 9.883, loss1 = 9.8688, loss2 = 0.014245
+[STATS][L2] iter = 1, cost = 256, time = 10.490, size = (1, 32, 32, 3), loss = 0.014442, loss1 = 0, loss2 = 0.014442
+[STATS][L3](Attack found!) iter = 1, cost = 512, time = 10.490, size = (1, 32, 32, 3), loss = 0.014442, loss1 = 0, loss2 = 0.014442
+Device mapping:
+import_17/CEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  8.84466979230859
+l2_distortion between inputs and adv_current  8.84466979230859
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.01773080724125943
+normalized l2 between inputs and adv_current  0.01773080724125943
+perceptual metrics distance between adv and img 0.014441813
+perceptual metrics distance between adv_current and img 0.014441813
+perceptual hash difference is  10
+Saving to id16_differ10_True_l28.84_pdistance0.014441813342273235
+[STATS][L1] total = 17, id = 16, time = 43.263, success = True, const = 50.000000, hash_avg=10.11765, distortion = 8.84467, success_rate = 1.000, l2_avg=6.85717, p_avg=0.006514087636948235, iteration_avg=1.588235294117647
+overall average hash  10.117647058823529
+overall average l2  6.857171391126412
+overal average perceptual distance  0.006514087636948235
+overal average iterations  1.588235294117647
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img17.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img17.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0027158, loss1 = 0, loss2 = 0.0027158
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0027158, loss1 = 0, loss2 = 0.0027158
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img17.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0027158, loss1 = 0, loss2 = 0.0027158
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0027158, loss1 = 0, loss2 = 0.0027158
+:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  6.1098240626546705
+l2_distortion between inputs and adv_current  6.1098240626546705
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.012248293636371274
+normalized l2 between inputs and adv_current  0.012248293636371274
+perceptual metrics distance between adv and img 0.0027158237
+perceptual metrics distance between adv_current and img 0.0027158237
+perceptual hash difference is  10
+Saving to id17_differ10_True_l26.11_pdistance0.002715823706239462
+[STATS][L1] total = 18, id = 17, time = 22.246, success = True, const = 100.000000, hash_avg=10.11111, distortion = 6.10982, success_rate = 1.000, l2_avg=6.81565, p_avg=0.00630307297413108, iteration_avg=1.5555555555555556
+overall average hash  10.11111111111111
+overall average l2  6.815652095100204
+overal average perceptual distance  0.00630307297413108
+overal average iterations  1.5555555555555556
+/device:CPU:0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img18.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img18.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 19.741, loss1 = 19.738, loss2 = 0.0038055
+[STATS][L2] iter = 1, cost = 256, time = 10.678, size = (1, 32, 32, 3), loss = 0.0038616, loss1 = 0, loss2 = 0.0038616
+[STATS][L3](First valid attack found!) iter = 1, cost = 512, time = 10.678, size = (1, 32, 32, 3), loss = 0.0038616, loss1 = 0, loss2 = 0.0038616
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img18.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 9.8726, loss1 = 9.8688, loss2 = 0.0038055
+[STATS][L2] iter = 1, cost = 256, time = 9.715, size = (1, 32, 32, 3), loss = 0.0038824, loss1 = 0, loss2 = 0.0038824
+[STATS][L3](Attack found!) iter = 1, cost = 512, time = 9.715, size = (1, 32, 32, 3), loss = 0.0038824, loss1 = 0, loss2 = 0.0038824
+0/device:CPU:0
+Device mapping:
+import_19/convolution_20/dilation_rate: (CoEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  10.653355073960043
+l2_distortion between inputs and adv_current  10.653355073960043
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.02135665770737325
+normalized l2 between inputs and adv_current  0.02135665770737325
+perceptual metrics distance between adv and img 0.0038616094
+perceptual metrics distance between adv_current and img 0.0038616094
+perceptual hash difference is  10
+Saving to id18_differ10_True_l210.65_pdistance0.0038616093806922436
+[STATS][L1] total = 19, id = 18, time = 41.935, success = True, const = 100.000000, hash_avg=10.10526, distortion = 10.65336, success_rate = 1.000, l2_avg=7.01764, p_avg=0.006174574890265879, iteration_avg=1.5789473684210527
+overall average hash  10.105263157894736
+overall average l2  7.017636462408617
+overal average perceptual distance  0.006174574890265879
+overal average iterations  1.5789473684210527
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img19.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img19.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0057529, loss1 = 0, loss2 = 0.0057529
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0057529, loss1 = 0, loss2 = 0.0057529
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img19.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0057529, loss1 = 0, loss2 = 0.0057529
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0057529, loss1 = 0, loss2 = 0.0057529
+lica:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  8.433781666510043
+l2_distortion between inputs and adv_current  8.433781666510043
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.016907104567521196
+normalized l2 between inputs and adv_current  0.016907104567521196
+perceptual metrics distance between adv and img 0.0057529323
+perceptual metrics distance between adv_current and img 0.0057529323
+perceptual hash difference is  10
+Saving to id19_differ10_True_l28.43_pdistance0.005752932280302048
+[STATS][L1] total = 20, id = 19, time = 24.883, success = True, const = 100.000000, hash_avg=10.10000, distortion = 8.43378, success_rate = 1.000, l2_avg=7.08844, p_avg=0.006153492759767687, iteration_avg=1.55
+overall average hash  10.1
+overall average l2  7.088443722613688
+overal average perceptual distance  0.006153492759767687
+overal average iterations  1.55
+evice:CPU:0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img20.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img20.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 19.738, loss1 = 19.738, loss2 = 0.00095829
+[STATS][L2] iter = 1, cost = 256, time = 10.412, size = (1, 32, 32, 3), loss = 0.00099209, loss1 = 0, loss2 = 0.00099209
+[STATS][L3](First valid attack found!) iter = 1, cost = 512, time = 10.412, size = (1, 32, 32, 3), loss = 0.00099209, loss1 = 0, loss2 = 0.00099209
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img20.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 9.8697, loss1 = 9.8688, loss2 = 0.00095829
+[STATS][L2] iter = 1, cost = 256, time = 10.421, size = (1, 32, 32, 3), loss = 0.0009824, loss1 = 0, loss2 = 0.0009824
+[STATS][L3](Attack found!) iter = 1, cost = 512, time = 10.421, size = (1, 32, 32, 3), loss = 0.0009824, loss1 = 0, loss2 = 0.0009824
+ask:0/device:CPU:0
+Device mapping:
+import_21/concat_Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  5.2543133200318275
+l2_distortion between inputs and adv_current  5.2543133200318275
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.010533261144885458
+normalized l2 between inputs and adv_current  0.010533261144885458
+perceptual metrics distance between adv and img 0.0009824029
+perceptual metrics distance between adv_current and img 0.0009824029
+perceptual hash difference is  10
+Saving to id20_differ10_True_l25.25_pdistance0.0009824029402807355
+[STATS][L1] total = 21, id = 20, time = 43.093, success = True, const = 50.000000, hash_avg=10.09524, distortion = 5.25431, success_rate = 1.000, l2_avg=7.00110, p_avg=0.005907250387411166, iteration_avg=1.5714285714285714
+overall average hash  10.095238095238095
+overall average l2  7.001104179633599
+overal average perceptual distance  0.005907250387411166
+overal average iterations  1.5714285714285714
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img21.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img21.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0012639, loss1 = 0, loss2 = 0.0012639
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0012639, loss1 = 0, loss2 = 0.0012639
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img21.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0012639, loss1 = 0, loss2 = 0.0012639
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0012639, loss1 = 0, loss2 = 0.0012639
+lica:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  2.9970880291670183
+l2_distortion between inputs and adv_current  2.9970880291670183
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.0060082277098075796
+normalized l2 between inputs and adv_current  0.0060082277098075796
+perceptual metrics distance between adv and img 0.0012638562
+perceptual metrics distance between adv_current and img 0.0012638562
+perceptual hash difference is  10
+Saving to id21_differ10_True_l23.00_pdistance0.0012638561893254519
+[STATS][L1] total = 22, id = 21, time = 21.863, success = True, const = 100.000000, hash_avg=10.09091, distortion = 2.99709, success_rate = 1.000, l2_avg=6.81910, p_avg=0.005696187014770906, iteration_avg=1.5454545454545454
+overall average hash  10.090909090909092
+overall average l2  6.819103445521483
+overal average perceptual distance  0.005696187014770906
+overal average iterations  1.5454545454545454
+ica:0/task:0/device:CPU:0
+import_22/transpose_for image id  22
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img22.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img22.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0007813, loss1 = 0, loss2 = 0.0007813
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0007813, loss1 = 0, loss2 = 0.0007813
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img22.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0007813, loss1 = 0, loss2 = 0.0007813
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0007813, loss1 = 0, loss2 = 0.0007813
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  4.083688324998336
+l2_distortion between inputs and adv_current  4.083688324998336
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.008186522755987228
+normalized l2 between inputs and adv_current  0.008186522755987228
+perceptual metrics distance between adv and img 0.00078129687
+perceptual metrics distance between adv_current and img 0.00078129687
+perceptual hash difference is  10
+Saving to id22_differ10_True_l24.08_pdistance0.0007812968688085675
+[STATS][L1] total = 23, id = 22, time = 22.755, success = True, const = 100.000000, hash_avg=10.08696, distortion = 4.08369, success_rate = 1.000, l2_avg=6.70017, p_avg=0.005482496138859499, iteration_avg=1.5217391304347827
+overall average hash  10.08695652173913
+overall average l2  6.700172353324825
+overal average perceptual distance  0.005482496138859499
+overal average iterations  1.5217391304347827
+lica:0/task:0/device:CPU:0
+for image id  23
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img23.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img23.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0022958, loss1 = 0, loss2 = 0.0022958
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0022958, loss1 = 0, loss2 = 0.0022958
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img23.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0022958, loss1 = 0, loss2 = 0.0022958
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0022958, loss1 = 0, loss2 = 0.0022958
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  9.314918837558299
+l2_distortion between inputs and adv_current  9.314918837558299
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.01867351006369375
+normalized l2 between inputs and adv_current  0.01867351006369375
+perceptual metrics distance between adv and img 0.0022958193
+perceptual metrics distance between adv_current and img 0.0022958193
+perceptual hash difference is  10
+Saving to id23_differ10_True_l29.31_pdistance0.002295819343999028
+[STATS][L1] total = 24, id = 23, time = 21.706, success = True, const = 100.000000, hash_avg=10.08333, distortion = 9.31492, success_rate = 1.000, l2_avg=6.80912, p_avg=0.0053497179390736465, iteration_avg=1.5
+overall average hash  10.083333333333334
+overall average l2  6.80912012350122
+overal average perceptual distance  0.0053497179390736465
+overal average iterations  1.5
+task:0/device:CPU:0
+impofor image id  24
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img24.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img24.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0019117, loss1 = 0, loss2 = 0.0019117
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0019117, loss1 = 0, loss2 = 0.0019117
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img24.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0019117, loss1 = 0, loss2 = 0.0019117
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0019117, loss1 = 0, loss2 = 0.0019117
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  4.275153545702009
+l2_distortion between inputs and adv_current  4.275153545702009
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.008570350869576521
+normalized l2 between inputs and adv_current  0.008570350869576521
+perceptual metrics distance between adv and img 0.0019116759
+perceptual metrics distance between adv_current and img 0.0019116759
+perceptual hash difference is  10
+Saving to id24_differ10_True_l24.28_pdistance0.001911675906740129
+[STATS][L1] total = 25, id = 24, time = 21.319, success = True, const = 100.000000, hash_avg=10.08000, distortion = 4.27515, success_rate = 1.000, l2_avg=6.70776, p_avg=0.005212196257780306, iteration_avg=1.48
+overall average hash  10.08
+overall average l2  6.707761460389252
+overal average perceptual distance  0.005212196257780306
+overal average iterations  1.48
+:CPU:0
+import_25/Const_176: (Const): /for image id  25
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img25.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img25.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.013254, loss1 = 0, loss2 = 0.013254
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.013254, loss1 = 0, loss2 = 0.013254
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img25.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.013254, loss1 = 0, loss2 = 0.013254
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.013254, loss1 = 0, loss2 = 0.013254
+job:localhost/replica:0/task:0/device:CPU:0
+Device mapping:
+import_26/split_33Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  9.993167854054647
+l2_distortion between inputs and adv_current  9.993167854054647
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.020033188022901268
+normalized l2 between inputs and adv_current  0.020033188022901268
+perceptual metrics distance between adv and img 0.0132537875
+perceptual metrics distance between adv_current and img 0.0132537875
+perceptual hash difference is  10
+Saving to id25_differ10_True_l29.99_pdistance0.013253787532448769
+[STATS][L1] total = 26, id = 25, time = 22.151, success = True, const = 100.000000, hash_avg=10.07692, distortion = 9.99317, success_rate = 1.000, l2_avg=6.83412, p_avg=0.005521488229882939, iteration_avg=1.4615384615384615
+overall average hash  10.076923076923077
+overall average l2  6.834123244760998
+overal average perceptual distance  0.005521488229882939
+overal average iterations  1.4615384615384615
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img26.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img26.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011492, loss1 = 0, loss2 = 0.0011492
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011492, loss1 = 0, loss2 = 0.0011492
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img26.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011492, loss1 = 0, loss2 = 0.0011492
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011492, loss1 = 0, loss2 = 0.0011492
+/replica:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  2.342868144255194
+l2_distortion between inputs and adv_current  2.342868144255194
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.0046967206727831085
+normalized l2 between inputs and adv_current  0.0046967206727831085
+perceptual metrics distance between adv and img 0.0011491993
+perceptual metrics distance between adv_current and img 0.0011491993
+perceptual hash difference is  10
+Saving to id26_differ10_True_l22.34_pdistance0.0011491993209347129
+[STATS][L1] total = 27, id = 26, time = 22.847, success = True, const = 100.000000, hash_avg=10.07407, distortion = 2.34287, success_rate = 1.000, l2_avg=6.66778, p_avg=0.005359551603625597, iteration_avg=1.4444444444444444
+overall average hash  10.074074074074074
+overall average l2  6.667780463260783
+overal average perceptual distance  0.005359551603625597
+overal average iterations  1.4444444444444444
+ocalhost/replica:0/task:0/device:CPU:0
+import_27/transpose_58/permfor image id  27
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img27.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img27.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0015953, loss1 = 0, loss2 = 0.0015953
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0015953, loss1 = 0, loss2 = 0.0015953
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img27.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0015953, loss1 = 0, loss2 = 0.0015953
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0015953, loss1 = 0, loss2 = 0.0015953
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  3.851411280240123
+l2_distortion between inputs and adv_current  3.851411280240123
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.007720879650717347
+normalized l2 between inputs and adv_current  0.007720879650717347
+perceptual metrics distance between adv and img 0.0015952772
+perceptual metrics distance between adv_current and img 0.0015952772
+perceptual hash difference is  10
+Saving to id27_differ10_True_l23.85_pdistance0.0015952772228047252
+[STATS][L1] total = 28, id = 27, time = 20.856, success = True, const = 100.000000, hash_avg=10.07143, distortion = 3.85141, success_rate = 1.000, l2_avg=6.56720, p_avg=0.005225113232881995, iteration_avg=1.4285714285714286
+overall average hash  10.071428571428571
+overall average l2  6.5671958495814735
+overal average perceptual distance  0.005225113232881995
+overal average iterations  1.4285714285714286
+e:CPU:0
+imporfor image id  28
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img28.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img28.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0027163, loss1 = 0, loss2 = 0.0027163
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0027163, loss1 = 0, loss2 = 0.0027163
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img28.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0027163, loss1 = 0, loss2 = 0.0027163
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0027163, loss1 = 0, loss2 = 0.0027163
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  3.727848635522966
+l2_distortion between inputs and adv_current  3.727848635522966
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.007473175045893623
+normalized l2 between inputs and adv_current  0.007473175045893623
+perceptual metrics distance between adv and img 0.002716253
+perceptual metrics distance between adv_current and img 0.002716253
+perceptual hash difference is  10
+Saving to id28_differ10_True_l23.73_pdistance0.0027162530459463596
+[STATS][L1] total = 29, id = 28, time = 22.286, success = True, const = 100.000000, hash_avg=10.06897, distortion = 3.72785, success_rate = 1.000, l2_avg=6.46929, p_avg=0.005138600812642835, iteration_avg=1.4137931034482758
+overall average hash  10.068965517241379
+overall average l2  6.469287324958767
+overal average perceptual distance  0.005138600812642835
+overal average iterations  1.4137931034482758
+:CPU:0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img29.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img29.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0069098, loss1 = 0, loss2 = 0.0069098
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0069098, loss1 = 0, loss2 = 0.0069098
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img29.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0069098, loss1 = 0, loss2 = 0.0069098
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0069098, loss1 = 0, loss2 = 0.0069098
+a:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  5.447976739747915
+l2_distortion between inputs and adv_current  5.447976739747915
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.010921495962612078
+normalized l2 between inputs and adv_current  0.010921495962612078
+perceptual metrics distance between adv and img 0.006909817
+perceptual metrics distance between adv_current and img 0.006909817
+perceptual hash difference is  10
+Saving to id29_differ10_True_l25.45_pdistance0.006909816991537809
+[STATS][L1] total = 30, id = 29, time = 21.578, success = True, const = 100.000000, hash_avg=10.06667, distortion = 5.44798, success_rate = 1.000, l2_avg=6.43524, p_avg=0.005197641351939334, iteration_avg=1.4
+overall average hash  10.066666666666666
+overall average l2  6.435243638785071
+overal average perceptual distance  0.005197641351939334
+overal average iterations  1.4
+ask:0/device:CPU:0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img30.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img30.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0018997, loss1 = 0, loss2 = 0.0018997
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0018997, loss1 = 0, loss2 = 0.0018997
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img30.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0018997, loss1 = 0, loss2 = 0.0018997
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0018997, loss1 = 0, loss2 = 0.0018997
+:CPU:0
+Device mapping:
+import_Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  6.797718297380783
+l2_distortion between inputs and adv_current  6.797718297380783
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.013627307253014026
+normalized l2 between inputs and adv_current  0.013627307253014026
+perceptual metrics distance between adv and img 0.0018996974
+perceptual metrics distance between adv_current and img 0.0018996974
+perceptual hash difference is  10
+Saving to id30_differ10_True_l26.80_pdistance0.0018996973522007465
+[STATS][L1] total = 31, id = 30, time = 24.065, success = True, const = 100.000000, hash_avg=10.06452, distortion = 6.79772, success_rate = 1.000, l2_avg=6.44694, p_avg=0.0050912560616251865, iteration_avg=1.3870967741935485
+overall average hash  10.064516129032258
+overall average l2  6.4469363697075135
+overal average perceptual distance  0.0050912560616251865
+overal average iterations  1.3870967741935485
+impfor image id  31
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img31.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img31.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0045356, loss1 = 0, loss2 = 0.0045356
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0045356, loss1 = 0, loss2 = 0.0045356
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img31.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0045356, loss1 = 0, loss2 = 0.0045356
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0045356, loss1 = 0, loss2 = 0.0045356
+Device mapping:
+import_32/Mean_Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  6.433713521740525
+l2_distortion between inputs and adv_current  6.433713521740525
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.012897591089117455
+normalized l2 between inputs and adv_current  0.012897591089117455
+perceptual metrics distance between adv and img 0.004535631
+perceptual metrics distance between adv_current and img 0.004535631
+perceptual hash difference is  10
+Saving to id31_differ10_True_l26.43_pdistance0.004535630811005831
+[STATS][L1] total = 32, id = 31, time = 23.660, success = True, const = 100.000000, hash_avg=10.06250, distortion = 6.43371, success_rate = 1.000, l2_avg=6.44652, p_avg=0.005073892772543331, iteration_avg=1.375
+overall average hash  10.0625
+overall average l2  6.446523155708545
+overal average perceptual distance  0.005073892772543331
+overal average iterations  1.375
+import_32/Const_175: for image id  32
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img32.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img32.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011011, loss1 = 0, loss2 = 0.0011011
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011011, loss1 = 0, loss2 = 0.0011011
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img32.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011011, loss1 = 0, loss2 = 0.0011011
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011011, loss1 = 0, loss2 = 0.0011011
+Device mapping:
+import_33/Const_175: (ConEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  3.39064021860651
+l2_distortion between inputs and adv_current  3.39064021860651
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.0067971772324223615
+normalized l2 between inputs and adv_current  0.0067971772324223615
+perceptual metrics distance between adv and img 0.0011011092
+perceptual metrics distance between adv_current and img 0.0011011092
+perceptual hash difference is  10
+Saving to id32_differ10_True_l23.39_pdistance0.0011011091992259026
+[STATS][L1] total = 33, id = 32, time = 22.768, success = True, const = 100.000000, hash_avg=10.06061, distortion = 3.39064, success_rate = 1.000, l2_avg=6.35392, p_avg=0.004953505391533712, iteration_avg=1.3636363636363635
+overall average hash  10.06060606060606
+overall average l2  6.353920642463028
+overal average perceptual distance  0.004953505391533712
+overal average iterations  1.3636363636363635
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img33.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img33.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.00067617, loss1 = 0, loss2 = 0.00067617
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.00067617, loss1 = 0, loss2 = 0.00067617
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img33.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.00067617, loss1 = 0, loss2 = 0.00067617
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.00067617, loss1 = 0, loss2 = 0.00067617
+replica:0/task:0/device:CPU:0
+Device mapping:
+import_34/transpose_56/perm:Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  4.845735304877059
+l2_distortion between inputs and adv_current  4.845735304877059
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.009714189523237651
+normalized l2 between inputs and adv_current  0.009714189523237651
+perceptual metrics distance between adv and img 0.0006761716
+perceptual metrics distance between adv_current and img 0.0006761716
+perceptual hash difference is  10
+Saving to id33_differ10_True_l24.85_pdistance0.0006761716213077307
+[STATS][L1] total = 34, id = 33, time = 21.781, success = True, const = 100.000000, hash_avg=10.05882, distortion = 4.84574, success_rate = 1.000, l2_avg=6.30956, p_avg=0.004827701457115301, iteration_avg=1.3529411764705883
+overall average hash  10.058823529411764
+overall average l2  6.309562250181088
+overal average perceptual distance  0.004827701457115301
+overal average iterations  1.3529411764705883
+import_34/transpose_53/permfor image id  34
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img34.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img34.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.00079683, loss1 = 0, loss2 = 0.00079683
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.00079683, loss1 = 0, loss2 = 0.00079683
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img34.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.00079683, loss1 = 0, loss2 = 0.00079683
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.00079683, loss1 = 0, loss2 = 0.00079683
+Device mapping:
+import_35/Mean_9/Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  4.048453623488799
+l2_distortion between inputs and adv_current  4.048453623488799
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.008115888157371437
+normalized l2 between inputs and adv_current  0.008115888157371437
+perceptual metrics distance between adv and img 0.00079683296
+perceptual metrics distance between adv_current and img 0.00079683296
+perceptual hash difference is  10
+Saving to id34_differ10_True_l24.05_pdistance0.0007968329591676593
+[STATS][L1] total = 35, id = 34, time = 22.289, success = True, const = 100.000000, hash_avg=10.05714, distortion = 4.04845, success_rate = 1.000, l2_avg=6.24496, p_avg=0.004712533785745369, iteration_avg=1.3428571428571427
+overall average hash  10.057142857142857
+overall average l2  6.244959146561309
+overal average perceptual distance  0.004712533785745369
+overal average iterations  1.3428571428571427
+import_35/for image id  35
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img35.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img35.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 19.738, loss1 = 19.738, loss2 = 0.00086418
+[STATS][L2] iter = 1, cost = 256, time = 10.540, size = (1, 32, 32, 3), loss = 0.0009617, loss1 = 0, loss2 = 0.0009617
+[STATS][L3](First valid attack found!) iter = 1, cost = 512, time = 10.540, size = (1, 32, 32, 3), loss = 0.0009617, loss1 = 0, loss2 = 0.0009617
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img35.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 9.8696, loss1 = 9.8688, loss2 = 0.00086418
+[STATS][L2] iter = 1, cost = 256, time = 10.735, size = (1, 32, 32, 3), loss = 0.00099741, loss1 = 0, loss2 = 0.00099741
+[STATS][L3](Attack found!) iter = 1, cost = 512, time = 10.735, size = (1, 32, 32, 3), loss = 0.00099741, loss1 = 0, loss2 = 0.00099741
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  3.3284348008084845
+l2_distortion between inputs and adv_current  3.3284348008084845
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.006672474750787837
+normalized l2 between inputs and adv_current  0.006672474750787837
+perceptual metrics distance between adv and img 0.0009617
+perceptual metrics distance between adv_current and img 0.0009617
+perceptual hash difference is  10
+Saving to id35_differ10_True_l23.33_pdistance0.0009616999886929989
+[STATS][L1] total = 36, id = 35, time = 43.652, success = True, const = 100.000000, hash_avg=10.05556, distortion = 3.32843, success_rate = 1.000, l2_avg=6.16394, p_avg=0.00460834395804947, iteration_avg=1.3611111111111112
+overall average hash  10.055555555555555
+overall average l2  6.163944581401507
+overal average perceptual distance  0.00460834395804947
+overal average iterations  1.3611111111111112
+k:0/device:CPU:0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img36.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img36.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011631, loss1 = 0, loss2 = 0.0011631
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011631, loss1 = 0, loss2 = 0.0011631
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img36.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011631, loss1 = 0, loss2 = 0.0011631
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0011631, loss1 = 0, loss2 = 0.0011631
+plica:0/task:0/device:CPU:0
+Device mapping:
+importEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  2.2547118772556383
+l2_distortion between inputs and adv_current  2.2547118772556383
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.00451999482388399
+normalized l2 between inputs and adv_current  0.00451999482388399
+perceptual metrics distance between adv and img 0.0011631085
+perceptual metrics distance between adv_current and img 0.0011631085
+perceptual hash difference is  10
+Saving to id36_differ10_True_l22.25_pdistance0.0011631085071712732
+[STATS][L1] total = 37, id = 36, time = 21.535, success = True, const = 100.000000, hash_avg=10.05405, distortion = 2.25471, success_rate = 1.000, l2_avg=6.05829, p_avg=0.004515229486404112, iteration_avg=1.3513513513513513
+overall average hash  10.054054054054054
+overall average l2  6.0582896434516185
+overal average perceptual distance  0.004515229486404112
+overal average iterations  1.3513513513513513
+import_37/transpose_56/perm: (Const): for image id  37
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img37.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img37.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0012367, loss1 = 0, loss2 = 0.0012367
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0012367, loss1 = 0, loss2 = 0.0012367
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img37.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0012367, loss1 = 0, loss2 = 0.0012367
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0012367, loss1 = 0, loss2 = 0.0012367
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  4.730655500117343
+l2_distortion between inputs and adv_current  4.730655500117343
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.009483490369569901
+normalized l2 between inputs and adv_current  0.009483490369569901
+perceptual metrics distance between adv and img 0.0012366605
+perceptual metrics distance between adv_current and img 0.0012366605
+perceptual hash difference is  10
+Saving to id37_differ10_True_l24.73_pdistance0.0012366605224087834
+[STATS][L1] total = 38, id = 37, time = 22.080, success = True, const = 100.000000, hash_avg=10.05263, distortion = 4.73066, success_rate = 1.000, l2_avg=6.02335, p_avg=0.0044289513557726565, iteration_avg=1.3421052631578947
+overall average hash  10.052631578947368
+overall average l2  6.023351902837558
+overal average perceptual distance  0.0044289513557726565
+overal average iterations  1.3421052631578947
+
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img38.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img38.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0048994, loss1 = 0, loss2 = 0.0048994
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0048994, loss1 = 0, loss2 = 0.0048994
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img38.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0048994, loss1 = 0, loss2 = 0.0048994
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0048994, loss1 = 0, loss2 = 0.0048994
+:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  11.446473903813427
+l2_distortion between inputs and adv_current  11.446473903813427
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.022946613852912183
+normalized l2 between inputs and adv_current  0.022946613852912183
+perceptual metrics distance between adv and img 0.0048993896
+perceptual metrics distance between adv_current and img 0.0048993896
+perceptual hash difference is  10
+Saving to id38_differ10_True_l211.45_pdistance0.004899389576166868
+[STATS][L1] total = 39, id = 38, time = 21.259, success = True, const = 100.000000, hash_avg=10.05128, distortion = 11.44647, success_rate = 1.000, l2_avg=6.16241, p_avg=0.004441013874244303, iteration_avg=1.3333333333333333
+overall average hash  10.051282051282051
+overall average l2  6.162406313118991
+overal average perceptual distance  0.004441013874244303
+overal average iterations  1.3333333333333333
+:localhost/replica:0/task:0/device:CPU:0
+impfor image id  39
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img39.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img39.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0014329, loss1 = 0, loss2 = 0.0014329
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0014329, loss1 = 0, loss2 = 0.0014329
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img39.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0014329, loss1 = 0, loss2 = 0.0014329
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0014329, loss1 = 0, loss2 = 0.0014329
+Device mapping:
+import_40/ConsEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  3.2831571944134628
+l2_distortion between inputs and adv_current  3.2831571944134628
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.0065817072568974625
+normalized l2 between inputs and adv_current  0.0065817072568974625
+perceptual metrics distance between adv and img 0.0014329306
+perceptual metrics distance between adv_current and img 0.0014329306
+perceptual hash difference is  10
+Saving to id39_differ10_True_l23.28_pdistance0.0014329305849969387
+[STATS][L1] total = 40, id = 39, time = 22.285, success = True, const = 100.000000, hash_avg=10.05000, distortion = 3.28316, success_rate = 1.000, l2_avg=6.09043, p_avg=0.004365811792013119, iteration_avg=1.325
+overall average hash  10.05
+overall average l2  6.090425085151353
+overal average perceptual distance  0.004365811792013119
+overal average iterations  1.325
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img40.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img40.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0010278, loss1 = 0, loss2 = 0.0010278
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0010278, loss1 = 0, loss2 = 0.0010278
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img40.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0010278, loss1 = 0, loss2 = 0.0010278
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0010278, loss1 = 0, loss2 = 0.0010278
+k:0/device:CPU:0
+Device mapping:
+import_41/Const_177: (ConstEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  4.480953554723721
+l2_distortion between inputs and adv_current  4.480953554723721
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.008982915767520661
+normalized l2 between inputs and adv_current  0.008982915767520661
+perceptual metrics distance between adv and img 0.0010277748
+perceptual metrics distance between adv_current and img 0.0010277748
+perceptual hash difference is  10
+Saving to id40_differ10_True_l24.48_pdistance0.001027774764224887
+[STATS][L1] total = 41, id = 40, time = 21.534, success = True, const = 100.000000, hash_avg=10.04878, distortion = 4.48095, success_rate = 1.000, l2_avg=6.05117, p_avg=0.004284396254749991, iteration_avg=1.3170731707317074
+overall average hash  10.048780487804878
+overall average l2  6.051169681970191
+overal average perceptual distance  0.004284396254749991
+overal average iterations  1.3170731707317074
+import_41/concat_26/concat_difor image id  41
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img41.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img41.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.002846, loss1 = 0, loss2 = 0.002846
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.002846, loss1 = 0, loss2 = 0.002846
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img41.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.002846, loss1 = 0, loss2 = 0.002846
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.002846, loss1 = 0, loss2 = 0.002846
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  6.519848610224045
+l2_distortion between inputs and adv_current  6.519848610224045
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.013070265104821042
+normalized l2 between inputs and adv_current  0.013070265104821042
+perceptual metrics distance between adv and img 0.0028459604
+perceptual metrics distance between adv_current and img 0.0028459604
+perceptual hash difference is  10
+Saving to id41_differ10_True_l26.52_pdistance0.00284596043638885
+[STATS][L1] total = 42, id = 41, time = 22.581, success = True, const = 100.000000, hash_avg=10.04762, distortion = 6.51985, success_rate = 1.000, l2_avg=6.06233, p_avg=0.00425014778288425, iteration_avg=1.3095238095238095
+overall average hash  10.047619047619047
+overall average l2  6.062328704071474
+overal average perceptual distance  0.00425014778288425
+overal average iterations  1.3095238095238095
+0
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img42.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img42.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.01184, loss1 = 0, loss2 = 0.01184
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.01184, loss1 = 0, loss2 = 0.01184
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img42.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.01184, loss1 = 0, loss2 = 0.01184
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.01184, loss1 = 0, loss2 = 0.01184
+calhost/replica:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  12.795045852002513
+l2_distortion between inputs and adv_current  12.795045852002513
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.02565008044078908
+normalized l2 between inputs and adv_current  0.02565008044078908
+perceptual metrics distance between adv and img 0.01183955
+perceptual metrics distance between adv_current and img 0.01183955
+perceptual hash difference is  10
+Saving to id42_differ10_True_l212.80_pdistance0.011839549988508224
+[STATS][L1] total = 43, id = 42, time = 22.816, success = True, const = 100.000000, hash_avg=10.04651, distortion = 12.79505, success_rate = 1.000, l2_avg=6.21890, p_avg=0.004426645508596436, iteration_avg=1.302325581395349
+overall average hash  10.046511627906977
+overall average l2  6.218903521465219
+overal average perceptual distance  0.004426645508596436
+overal average iterations  1.302325581395349
+0/task:0/device:CPU:0
+import_43/Const_172: (Const): /jofor image id  43
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img43.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img43.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 19.738, loss1 = 19.738, loss2 = 0.00051193
+[STATS][L2] iter = 1, cost = 256, time = 10.166, size = (1, 32, 32, 3), loss = 0.00061602, loss1 = 0, loss2 = 0.00061602
+[STATS][L3](First valid attack found!) iter = 1, cost = 512, time = 10.166, size = (1, 32, 32, 3), loss = 0.00061602, loss1 = 0, loss2 = 0.00061602
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img43.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 9.8693, loss1 = 9.8688, loss2 = 0.00051193
+[STATS][L2] iter = 1, cost = 256, time = 10.666, size = (1, 32, 32, 3), loss = 0.00063069, loss1 = 0, loss2 = 0.00063069
+[STATS][L3](Attack found!) iter = 1, cost = 512, time = 10.666, size = (1, 32, 32, 3), loss = 0.00063069, loss1 = 0, loss2 = 0.00063069
+b:localhost/replica:0/task:0/device:CPU:0
+Device mapping:
+import_44/traEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  2.7008914626151053
+l2_distortion between inputs and adv_current  2.7008914626151053
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.005414445878447198
+normalized l2 between inputs and adv_current  0.005414445878447198
+perceptual metrics distance between adv and img 0.00061602436
+perceptual metrics distance between adv_current and img 0.00061602436
+perceptual hash difference is  10
+Saving to id43_differ10_True_l22.70_pdistance0.0006160243647173047
+[STATS][L1] total = 44, id = 43, time = 43.384, success = True, const = 100.000000, hash_avg=10.04545, distortion = 2.70089, success_rate = 1.000, l2_avg=6.13895, p_avg=0.004340040482599183, iteration_avg=1.3181818181818181
+overall average hash  10.045454545454545
+overall average l2  6.138948701945898
+overal average perceptual distance  0.004340040482599183
+overal average iterations  1.3181818181818181
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img44.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img44.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0010182, loss1 = 0, loss2 = 0.0010182
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0010182, loss1 = 0, loss2 = 0.0010182
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img44.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.0010182, loss1 = 0, loss2 = 0.0010182
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.0010182, loss1 = 0, loss2 = 0.0010182
+sk:0/device:CPU:0
+Device mapping:
+import_45/tranEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  4.138729758246769
+l2_distortion between inputs and adv_current  4.138729758246769
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.008296863680648912
+normalized l2 between inputs and adv_current  0.008296863680648912
+perceptual metrics distance between adv and img 0.0010182043
+perceptual metrics distance between adv_current and img 0.0010182043
+perceptual hash difference is  10
+Saving to id44_differ10_True_l24.14_pdistance0.0010182042606174946
+[STATS][L1] total = 45, id = 44, time = 21.672, success = True, const = 100.000000, hash_avg=10.04444, distortion = 4.13873, success_rate = 1.000, l2_avg=6.09450, p_avg=0.004266221899888479, iteration_avg=1.3111111111111111
+overall average hash  10.044444444444444
+overall average l2  6.094499392085917
+overal average perceptual distance  0.004266221899888479
+overal average iterations  1.3111111111111111
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img45.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img45.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 19.783, loss1 = 19.738, loss2 = 0.045221
+[STATS][L2] iter = 1, cost = 256, time = 10.304, size = (1, 32, 32, 3), loss = 0.045541, loss1 = 0, loss2 = 0.045541
+[STATS][L3](First valid attack found!) iter = 1, cost = 512, time = 10.304, size = (1, 32, 32, 3), loss = 0.045541, loss1 = 0, loss2 = 0.045541
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img45.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 9.914, loss1 = 9.8688, loss2 = 0.045221
+[STATS][L2] iter = 1, cost = 256, time = 10.664, size = (1, 32, 32, 3), loss = 0.045349, loss1 = 0, loss2 = 0.045349
+[STATS][L3](Attack found!) iter = 1, cost = 512, time = 10.664, size = (1, 32, 32, 3), loss = 0.045349, loss1 = 0, loss2 = 0.045349
+localhost/replica:0/task:0/device:CPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  13.419606536532607
+l2_distortion between inputs and adv_current  13.419606536532607
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.026902130021826256
+normalized l2 between inputs and adv_current  0.026902130021826256
+perceptual metrics distance between adv and img 0.04534892
+perceptual metrics distance between adv_current and img 0.04534892
+perceptual hash difference is  10
+Saving to id45_differ10_True_l213.42_pdistance0.04534891992807388
+[STATS][L1] total = 46, id = 45, time = 43.077, success = True, const = 50.000000, hash_avg=10.04348, distortion = 13.41961, success_rate = 1.000, l2_avg=6.25374, p_avg=0.005159324030935987, iteration_avg=1.326086956521739
+overall average hash  10.043478260869565
+overall average l2  6.253740851747802
+overal average perceptual distance  0.005159324030935987
+overal average iterations  1.326086956521739
+PU:0
+import_46/Const_170: (Confor image id  46
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img46.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img46.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.002951, loss1 = 0, loss2 = 0.002951
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.002951, loss1 = 0, loss2 = 0.002951
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img46.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.002951, loss1 = 0, loss2 = 0.002951
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.002951, loss1 = 0, loss2 = 0.002951
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  5.035585125508992
+l2_distortion between inputs and adv_current  5.035585125508992
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.010094779262985736
+normalized l2 between inputs and adv_current  0.010094779262985736
+perceptual metrics distance between adv and img 0.0029509598
+perceptual metrics distance between adv_current and img 0.0029509598
+perceptual hash difference is  10
+Saving to id46_differ10_True_l25.04_pdistance0.002950959838926792
+[STATS][L1] total = 47, id = 46, time = 22.189, success = True, const = 100.000000, hash_avg=10.04255, distortion = 5.03559, success_rate = 1.000, l2_avg=6.22782, p_avg=0.005112337558765579, iteration_avg=1.3191489361702127
+overall average hash  10.042553191489361
+overall average l2  6.227822644806551
+overal average perceptual distance  0.005112337558765579
+overal average iterations  1.3191489361702127
+lhost/replica:0/task:0/device:CPU:0
+imfor image id  47
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img47.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img47.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.002561, loss1 = 0, loss2 = 0.002561
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.002561, loss1 = 0, loss2 = 0.002561
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img47.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.002561, loss1 = 0, loss2 = 0.002561
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.002561, loss1 = 0, loss2 = 0.002561
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  7.513078062632467
+l2_distortion between inputs and adv_current  7.513078062632467
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.015061380701053914
+normalized l2 between inputs and adv_current  0.015061380701053914
+perceptual metrics distance between adv and img 0.002560975
+perceptual metrics distance between adv_current and img 0.002560975
+perceptual hash difference is  10
+Saving to id47_differ10_True_l27.51_pdistance0.002560975030064583
+[STATS][L1] total = 48, id = 47, time = 22.480, success = True, const = 100.000000, hash_avg=10.04167, distortion = 7.51308, success_rate = 1.000, l2_avg=6.25460, p_avg=0.0050591841727509745, iteration_avg=1.3125
+overall average hash  10.041666666666666
+overall average l2  6.254598799344591
+overal average perceptual distance  0.0050591841727509745
+overal average iterations  1.3125
+:CPU:0
+for image id  48
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img48.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img48.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 19.74, loss1 = 19.738, loss2 = 0.0023327
+[STATS][L2] iter = 1, cost = 256, time = 10.967, size = (1, 32, 32, 3), loss = 0.0025256, loss1 = 0, loss2 = 0.0025256
+[STATS][L3](First valid attack found!) iter = 1, cost = 512, time = 10.967, size = (1, 32, 32, 3), loss = 0.0025256, loss1 = 0, loss2 = 0.0025256
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img48.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 9.8711, loss1 = 9.8688, loss2 = 0.0023327
+[STATS][L2] iter = 1, cost = 256, time = 11.192, size = (1, 32, 32, 3), loss = 0.0024376, loss1 = 0, loss2 = 0.0024376
+[STATS][L3](Attack found!) iter = 1, cost = 512, time = 11.192, size = (1, 32, 32, 3), loss = 0.0024376, loss1 = 0, loss2 = 0.0024376
+Device mapping:
+import_49/transpose_56/perm: (Const): /joEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  4.596575396168901
+l2_distortion between inputs and adv_current  4.596575396168901
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.009214701535862936
+normalized l2 between inputs and adv_current  0.009214701535862936
+perceptual metrics distance between adv and img 0.002437573
+perceptual metrics distance between adv_current and img 0.002437573
+perceptual hash difference is  10
+Saving to id48_differ10_True_l24.60_pdistance0.0024375729262828827
+[STATS][L1] total = 49, id = 48, time = 44.473, success = True, const = 50.000000, hash_avg=10.04082, distortion = 4.59658, success_rate = 1.000, l2_avg=6.22076, p_avg=0.005005681902414891, iteration_avg=1.3265306122448979
+overall average hash  10.040816326530612
+overall average l2  6.2207615870348825
+overal average perceptual distance  0.005005681902414891
+overal average iterations  1.3265306122448979
+b:localhost/replica:0/task:0/device:CPU:0
+import_49/Mean_5/reduction_indices: (Cfor image id  49
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img49.npy
+new image L3 False
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img49.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.022679, loss1 = 0, loss2 = 0.022679
+[STATS][L3](First valid attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.022679, loss1 = 0, loss2 = 0.022679
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+loading pretrained greyscale modifier ./best_modifier_imagenet/best_modifier_img49.npy
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 3), loss = 0.022679, loss1 = 0, loss2 = 0.022679
+[STATS][L3](Attack found!) iter = 0, cost = 256, time = 0.000, size = (1, 32, 32, 3), loss = 0.022679, loss1 = 0, loss2 = 0.022679
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+l2_distortion between inputs and adv  15.407852989867232
+l2_distortion between inputs and adv_current  15.407852989867232
+normalized a,b,c 288 288 3
+normalized l2 between inputs and adv  0.030887944692132036
+normalized l2 between inputs and adv_current  0.030887944692132036
+perceptual metrics distance between adv and img 0.022678748
+perceptual metrics distance between adv_current and img 0.022678748
+perceptual hash difference is  10
+Saving to id49_differ10_True_l215.41_pdistance0.02267874777317047
+[STATS][L1] total = 50, id = 49, time = 23.001, success = True, const = 100.000000, hash_avg=10.04000, distortion = 15.40785, success_rate = 1.000, l2_avg=6.40450, p_avg=0.0053591432198300025, iteration_avg=1.32
+overall average hash  10.04
+overall average l2  6.404503415091529
+overal average perceptual distance  0.0053591432198300025
+overal average iterations  1.32
+

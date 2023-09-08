@@ -1,0 +1,1219 @@
+{'dataset': 'imagenet', 'save': 'black_results_imagenet', 'attack': 'black', 'numimg': 50, 'maxiter': 2000, 'print_every': 1, 'early_stop_iters': 0, 'firstimg': 0, 'binary_steps': 2, 'init_const': 100, 'use_zvalue': False, 'untargeted': True, 'reset_adam': True, 'use_resize': True, 'adam_beta1': 0.9, 'adam_beta2': 0.999, 'seed': 1216, 'solver': 'adam', 'save_ckpts': 'best_modifier_imagenet', 'load_ckpt': '', 'start_iter': 0, 'init_size': 32, 'uniform': False, 'method': 'tanh', 'gpu': '0', 'hash': 10, 'batch': 256, 'start_idx': 1, 'dct': False, 'lr': 0.01, 'transform': 'centrol_crop', 'dist_metrics': 'pdist', 'bits': 8, 'factor': 4, 'maximize': 'minus', 'htype': 'phash', 'inception': False, 'use_tanh': True}
+Loading model imagenet
+Device mapping:
+gradients/imUsing 50 test images
+early stop: 200
+creating save_ckpts  best_modifier_imagenet
+use tanh True
+method is  tanh
+batch size  256
+resize  32
+use important  True
+load ckpt 
+use dct False
+dist metrics pdist
+htype  phash
+loss2  Tensor("Reshape_3:0", shape=(?,), dtype=float32)
+Using adam solver
+Generate data
+Done...
+for image id  1
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 4.2564e-08, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 5.680, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 4.6553e-05, lr=0.01
+saving outstep 0 and iteration 1
+[STATS][L2] iter = 2, cost = 512, time = 7.476, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00010763, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 9.080, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00018071, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 10.931, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00027712, lr=0.01
+saving outstep 0 and iteration 4
+[STATS][L2] iter = 5, cost = 1280, time = 12.703, size = (1, 32, 32, 1), loss = 37.995, loss1 = 37.995, loss2 = 0.00037973, lr=0.01
+saving outstep 0 and iteration 5
+[STATS][L2] iter = 6, cost = 1536, time = 14.261, size = (1, 32, 32, 1), loss = 37.995, loss1 = 37.995, loss2 = 0.0004741, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 15.767, size = (1, 32, 32, 1), loss = 37.995, loss1 = 37.995, loss2 = 0.00057575, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 17.296, size = (1, 32, 32, 1), loss = 19.738, loss1 = 19.738, loss2 = 0.00068753, lr=0.01
+saving outstep 0 and iteration 8
+[STATS][L2] iter = 9, cost = 2304, time = 18.840, size = (1, 32, 32, 1), loss = 0.00080185, loss1 = 0, loss2 = 0.00080185, lr=0.01
+saving outstep 0 and iteration 9
+[STATS][L3](First valid attack found!) iter = 9, cost = 2560, time = 18.840, size = (1, 32, 32, 1), loss = 0.0008015, loss1 = 0, loss2 = 0.0008015
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.589, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 4.8997e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.220, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00011163, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.766, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00019363, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.285, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00027425, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.843, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00037142, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.435, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00049314, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 11.170, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00063234, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.738, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00077038, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 14.323, size = (1, 32, 32, 1), loss = 9.8697, loss1 = 9.8688, loss2 = 0.00088449, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 16.026, size = (1, 32, 32, 1), loss = 9.8698, loss1 = 9.8688, loss2 = 0.0010133, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.538, size = (1, 32, 32, 1), loss = 0.0011378, loss1 = 0, loss2 = 0.0011378, lr=0.01
+do I get here
+[STATS][L3](Attack found!) iter = 11, cost = 3072, time = 17.538, size = (1, 32, 32, 1), loss = 0.0011376, loss1 = 0, loss2 = 0.0011376
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  2.419186255529005
+l2_distortion between inputs and adv_current  2.419186255529005
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.0008017741
+perceptual metrics distance between adv_current and img 0.0008017741
+normalized perceptual metrics distance between adv and img 2.7839378162752837e-06
+normalized perceptual metrics distance between adv_current and img 2.7839378162752837e-06
+perceptual hash difference is  10
+Saving to id1_differ10_True_l22.42_pdistance0.0008017740910872817
+[STATS][L1] total = 2, id = 1, time = 44.781, success = True, const = 100.000000, hash_avg=10.00000, distortion = 2.41919, success_rate = 0.500, l2_avg=2.41919, p_avg=0.0008017740910872817, iteration_avg=10.0
+vice:GPU:0
+import_1/transpose_51/peoverall average hash  10.0
+overall average l2  2.419186255529005
+overal average perceptual distance  0.0008017740910872817
+overal average iterations  10.0
+for image id  2
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.562, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 6.2652e-06, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.074, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 1.5654e-05, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.601, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 2.4629e-05, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.110, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 3.7824e-05, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.688, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 5.6164e-05, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.224, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 7.9175e-05, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.758, size = (1, 32, 32, 1), loss = 76.16, loss1 = 76.159, loss2 = 0.00010419, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.337, size = (1, 32, 32, 1), loss = 76.16, loss1 = 76.159, loss2 = 0.00013623, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.949, size = (1, 32, 32, 1), loss = 76.16, loss1 = 76.159, loss2 = 0.00017708, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.470, size = (1, 32, 32, 1), loss = 76.16, loss1 = 76.159, loss2 = 0.00021486, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.186, size = (1, 32, 32, 1), loss = 76.16, loss1 = 76.159, loss2 = 0.00025012, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.736, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00028256, lr=0.01
+saving outstep 0 and iteration 12
+[STATS][L2] iter = 13, cost = 3328, time = 20.284, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00032977, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.796, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00037039, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 23.325, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00040723, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.863, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00046492, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.445, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00053025, lr=0.01
+[STATS][L2] iter = 18, cost = 4608, time = 27.970, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00059459, lr=0.01
+[STATS][L2] iter = 19, cost = 4864, time = 29.503, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00065728, lr=0.01
+[STATS][L2] iter = 20, cost = 5120, time = 31.023, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00071108, lr=0.01
+[STATS][L2] iter = 21, cost = 5376, time = 32.569, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00078316, lr=0.01
+[STATS][L2] iter = 22, cost = 5632, time = 34.142, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.00085824, lr=0.01
+[STATS][L2] iter = 23, cost = 5888, time = 35.665, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.00093163, lr=0.01
+[STATS][L2] iter = 24, cost = 6144, time = 37.234, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.0010135, lr=0.01
+[STATS][L2] iter = 25, cost = 6400, time = 38.757, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.0011045, lr=0.01
+[STATS][L2] iter = 26, cost = 6656, time = 40.272, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.001191, lr=0.01
+[STATS][L2] iter = 27, cost = 6912, time = 41.817, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.001279, lr=0.01
+[STATS][L2] iter = 28, cost = 7168, time = 43.330, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.0013792, lr=0.01
+[STATS][L2] iter = 29, cost = 7424, time = 44.861, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.0014678, lr=0.01
+[STATS][L2] iter = 30, cost = 7680, time = 46.380, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.0015841, lr=0.01
+[STATS][L2] iter = 31, cost = 7936, time = 47.895, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.0017057, lr=0.01
+[STATS][L2] iter = 32, cost = 8192, time = 49.453, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.0018209, lr=0.01
+[STATS][L2] iter = 33, cost = 8448, time = 50.973, size = (1, 32, 32, 1), loss = 66.406, loss1 = 66.404, loss2 = 0.0019303, lr=0.01
+[STATS][L2] iter = 34, cost = 8704, time = 52.479, size = (1, 32, 32, 1), loss = 66.406, loss1 = 66.404, loss2 = 0.0020507, lr=0.01
+[STATS][L2] iter = 35, cost = 8960, time = 53.994, size = (1, 32, 32, 1), loss = 53.707, loss1 = 53.705, loss2 = 0.0022069, lr=0.01
+saving outstep 0 and iteration 35
+[STATS][L2] iter = 36, cost = 9216, time = 55.522, size = (1, 32, 32, 1), loss = 66.406, loss1 = 66.404, loss2 = 0.0023011, lr=0.01
+[STATS][L2] iter = 37, cost = 9472, time = 57.034, size = (1, 32, 32, 1), loss = 53.707, loss1 = 53.705, loss2 = 0.0024779, lr=0.01
+[STATS][L2] iter = 38, cost = 9728, time = 58.552, size = (1, 32, 32, 1), loss = 53.708, loss1 = 53.705, loss2 = 0.0026124, lr=0.01
+[STATS][L2] iter = 39, cost = 9984, time = 60.082, size = (1, 32, 32, 1), loss = 53.708, loss1 = 53.705, loss2 = 0.0027836, lr=0.01
+[STATS][L2] iter = 40, cost = 10240, time = 61.641, size = (1, 32, 32, 1), loss = 53.708, loss1 = 53.705, loss2 = 0.0029441, lr=0.01
+[STATS][L2] iter = 41, cost = 10496, time = 63.205, size = (1, 32, 32, 1), loss = 53.708, loss1 = 53.705, loss2 = 0.0031544, lr=0.01
+[STATS][L2] iter = 42, cost = 10752, time = 64.862, size = (1, 32, 32, 1), loss = 53.708, loss1 = 53.705, loss2 = 0.0033441, lr=0.01
+[STATS][L2] iter = 43, cost = 11008, time = 66.642, size = (1, 32, 32, 1), loss = 53.708, loss1 = 53.705, loss2 = 0.0034887, lr=0.01
+[STATS][L2] iter = 44, cost = 11264, time = 68.239, size = (1, 32, 32, 1), loss = 53.709, loss1 = 53.705, loss2 = 0.0037032, lr=0.01
+[STATS][L2] iter = 45, cost = 11520, time = 69.766, size = (1, 32, 32, 1), loss = 53.709, loss1 = 53.705, loss2 = 0.0038557, lr=0.01
+[STATS][L2] iter = 46, cost = 11776, time = 71.330, size = (1, 32, 32, 1), loss = 53.709, loss1 = 53.705, loss2 = 0.004032, lr=0.01
+[STATS][L2] iter = 47, cost = 12032, time = 72.947, size = (1, 32, 32, 1), loss = 53.709, loss1 = 53.705, loss2 = 0.0042198, lr=0.01
+[STATS][L2] iter = 48, cost = 12288, time = 74.524, size = (1, 32, 32, 1), loss = 53.709, loss1 = 53.705, loss2 = 0.0043712, lr=0.01
+[STATS][L2] iter = 49, cost = 12544, time = 76.238, size = (1, 32, 32, 1), loss = 53.71, loss1 = 53.705, loss2 = 0.004562, lr=0.01
+[STATS][L2] iter = 50, cost = 12800, time = 77.757, size = (1, 32, 32, 1), loss = 53.71, loss1 = 53.705, loss2 = 0.0048033, lr=0.01
+[STATS][L2] iter = 51, cost = 13056, time = 79.303, size = (1, 32, 32, 1), loss = 53.71, loss1 = 53.705, loss2 = 0.0050153, lr=0.01
+[STATS][L2] iter = 52, cost = 13312, time = 80.849, size = (1, 32, 32, 1), loss = 53.71, loss1 = 53.705, loss2 = 0.0052562, lr=0.01
+[STATS][L2] iter = 53, cost = 13568, time = 82.481, size = (1, 32, 32, 1), loss = 53.71, loss1 = 53.705, loss2 = 0.0055277, lr=0.01
+[STATS][L2] iter = 54, cost = 13824, time = 84.033, size = (1, 32, 32, 1), loss = 53.711, loss1 = 53.705, loss2 = 0.0057955, lr=0.01
+[STATS][L2] iter = 55, cost = 14080, time = 85.555, size = (1, 32, 32, 1), loss = 38.001, loss1 = 37.995, loss2 = 0.0060274, lr=0.01
+saving outstep 0 and iteration 55
+[STATS][L2] iter = 56, cost = 14336, time = 87.123, size = (1, 32, 32, 1), loss = 38.001, loss1 = 37.995, loss2 = 0.0062652, lr=0.01
+[STATS][L2] iter = 57, cost = 14592, time = 88.702, size = (1, 32, 32, 1), loss = 38.001, loss1 = 37.995, loss2 = 0.0064395, lr=0.01
+[STATS][L2] iter = 58, cost = 14848, time = 90.211, size = (1, 32, 32, 1), loss = 38.001, loss1 = 37.995, loss2 = 0.0066014, lr=0.01
+[STATS][L2] iter = 59, cost = 15104, time = 91.850, size = (1, 32, 32, 1), loss = 38.002, loss1 = 37.995, loss2 = 0.006842, lr=0.01
+[STATS][L2] iter = 60, cost = 15360, time = 93.369, size = (1, 32, 32, 1), loss = 38.002, loss1 = 37.995, loss2 = 0.0070744, lr=0.01
+[STATS][L2] iter = 61, cost = 15616, time = 94.885, size = (1, 32, 32, 1), loss = 38.002, loss1 = 37.995, loss2 = 0.0073038, lr=0.01
+[STATS][L2] iter = 62, cost = 15872, time = 96.399, size = (1, 32, 32, 1), loss = 38.002, loss1 = 37.995, loss2 = 0.0075629, lr=0.01
+[STATS][L2] iter = 63, cost = 16128, time = 97.964, size = (1, 32, 32, 1), loss = 38.003, loss1 = 37.995, loss2 = 0.0078388, lr=0.01
+[STATS][L2] iter = 64, cost = 16384, time = 99.767, size = (1, 32, 32, 1), loss = 38.003, loss1 = 37.995, loss2 = 0.0081624, lr=0.01
+[STATS][L2] iter = 65, cost = 16640, time = 101.309, size = (1, 32, 32, 1), loss = 38.003, loss1 = 37.995, loss2 = 0.0084247, lr=0.01
+[STATS][L2] iter = 66, cost = 16896, time = 102.836, size = (1, 32, 32, 1), loss = 38.004, loss1 = 37.995, loss2 = 0.008662, lr=0.01
+[STATS][L2] iter = 67, cost = 17152, time = 104.427, size = (1, 32, 32, 1), loss = 38.004, loss1 = 37.995, loss2 = 0.0089605, lr=0.01
+[STATS][L2] iter = 68, cost = 17408, time = 105.958, size = (1, 32, 32, 1), loss = 38.004, loss1 = 37.995, loss2 = 0.0093906, lr=0.01
+[STATS][L2] iter = 69, cost = 17664, time = 107.573, size = (1, 32, 32, 1), loss = 38.005, loss1 = 37.995, loss2 = 0.0097388, lr=0.01
+[STATS][L2] iter = 70, cost = 17920, time = 109.123, size = (1, 32, 32, 1), loss = 38.005, loss1 = 37.995, loss2 = 0.010107, lr=0.01
+[STATS][L2] iter = 71, cost = 18176, time = 110.648, size = (1, 32, 32, 1), loss = 38.005, loss1 = 37.995, loss2 = 0.010439, lr=0.01
+[STATS][L2] iter = 72, cost = 18432, time = 112.170, size = (1, 32, 32, 1), loss = 38.006, loss1 = 37.995, loss2 = 0.010831, lr=0.01
+[STATS][L2] iter = 73, cost = 18688, time = 113.842, size = (1, 32, 32, 1), loss = 38.006, loss1 = 37.995, loss2 = 0.011059, lr=0.01
+[STATS][L2] iter = 74, cost = 18944, time = 115.656, size = (1, 32, 32, 1), loss = 38.006, loss1 = 37.995, loss2 = 0.011451, lr=0.01
+[STATS][L2] iter = 75, cost = 19200, time = 117.233, size = (1, 32, 32, 1), loss = 38.007, loss1 = 37.995, loss2 = 0.011833, lr=0.01
+[STATS][L2] iter = 76, cost = 19456, time = 118.758, size = (1, 32, 32, 1), loss = 19.75, loss1 = 19.738, loss2 = 0.012215, lr=0.01
+saving outstep 0 and iteration 76
+[STATS][L2] iter = 77, cost = 19712, time = 120.315, size = (1, 32, 32, 1), loss = 19.75, loss1 = 19.738, loss2 = 0.012651, lr=0.01
+[STATS][L2] iter = 78, cost = 19968, time = 121.844, size = (1, 32, 32, 1), loss = 19.751, loss1 = 19.738, loss2 = 0.013054, lr=0.01
+[STATS][L2] iter = 79, cost = 20224, time = 123.388, size = (1, 32, 32, 1), loss = 19.751, loss1 = 19.738, loss2 = 0.013608, lr=0.01
+[STATS][L2] iter = 80, cost = 20480, time = 124.917, size = (1, 32, 32, 1), loss = 19.752, loss1 = 19.738, loss2 = 0.013994, lr=0.01
+[STATS][L2] iter = 81, cost = 20736, time = 126.434, size = (1, 32, 32, 1), loss = 19.752, loss1 = 19.738, loss2 = 0.014438, lr=0.01
+[STATS][L2] iter = 82, cost = 20992, time = 128.114, size = (1, 32, 32, 1), loss = 19.752, loss1 = 19.738, loss2 = 0.014805, lr=0.01
+[STATS][L2] iter = 83, cost = 21248, time = 129.643, size = (1, 32, 32, 1), loss = 19.753, loss1 = 19.738, loss2 = 0.015193, lr=0.01
+[STATS][L2] iter = 84, cost = 21504, time = 131.176, size = (1, 32, 32, 1), loss = 19.753, loss1 = 19.738, loss2 = 0.015624, lr=0.01
+[STATS][L2] iter = 85, cost = 21760, time = 132.688, size = (1, 32, 32, 1), loss = 19.754, loss1 = 19.738, loss2 = 0.015978, lr=0.01
+[STATS][L2] iter = 86, cost = 22016, time = 134.216, size = (1, 32, 32, 1), loss = 19.754, loss1 = 19.738, loss2 = 0.016481, lr=0.01
+[STATS][L2] iter = 87, cost = 22272, time = 135.746, size = (1, 32, 32, 1), loss = 19.755, loss1 = 19.738, loss2 = 0.016989, lr=0.01
+[STATS][L2] iter = 88, cost = 22528, time = 137.279, size = (1, 32, 32, 1), loss = 19.755, loss1 = 19.738, loss2 = 0.017399, lr=0.01
+[STATS][L2] iter = 89, cost = 22784, time = 138.802, size = (1, 32, 32, 1), loss = 19.755, loss1 = 19.738, loss2 = 0.017808, lr=0.01
+[STATS][L2] iter = 90, cost = 23040, time = 140.339, size = (1, 32, 32, 1), loss = 0.018285, loss1 = 0, loss2 = 0.018285, lr=0.01
+saving outstep 0 and iteration 90
+[STATS][L3](First valid attack found!) iter = 90, cost = 23296, time = 140.339, size = (1, 32, 32, 1), loss = 0.01827, loss1 = 0, loss2 = 0.01827
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.521, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 6.6911e-06, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.036, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 1.509e-05, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.590, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 2.6757e-05, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.171, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 4.4303e-05, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.761, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 6.176e-05, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.281, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 8.3595e-05, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.841, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0.00010699, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.388, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0.00013752, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.930, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0.00016712, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.505, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.0002141, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.056, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00025638, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.573, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.0003012, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.088, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00035315, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.595, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00039804, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 23.121, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00045425, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.815, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00050593, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.390, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00058736, lr=0.01
+[STATS][L2] iter = 18, cost = 4608, time = 27.929, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00065722, lr=0.01
+[STATS][L2] iter = 19, cost = 4864, time = 29.466, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.0007362, lr=0.01
+[STATS][L2] iter = 20, cost = 5120, time = 31.007, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.00082652, lr=0.01
+[STATS][L2] iter = 21, cost = 5376, time = 32.521, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.00092219, lr=0.01
+[STATS][L2] iter = 22, cost = 5632, time = 34.098, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.0010211, lr=0.01
+[STATS][L2] iter = 23, cost = 5888, time = 35.679, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.0010999, lr=0.01
+[STATS][L2] iter = 24, cost = 6144, time = 37.183, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.0012074, lr=0.01
+[STATS][L2] iter = 25, cost = 6400, time = 38.758, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.001302, lr=0.01
+[STATS][L2] iter = 26, cost = 6656, time = 40.308, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.0013867, lr=0.01
+[STATS][L2] iter = 27, cost = 6912, time = 41.926, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.0015228, lr=0.01
+[STATS][L2] iter = 28, cost = 7168, time = 43.446, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.001596, lr=0.01
+[STATS][L2] iter = 29, cost = 7424, time = 44.984, size = (1, 32, 32, 1), loss = 33.204, loss1 = 33.202, loss2 = 0.0017718, lr=0.01
+[STATS][L2] iter = 30, cost = 7680, time = 46.503, size = (1, 32, 32, 1), loss = 33.204, loss1 = 33.202, loss2 = 0.0018911, lr=0.01
+[STATS][L2] iter = 31, cost = 7936, time = 48.024, size = (1, 32, 32, 1), loss = 33.204, loss1 = 33.202, loss2 = 0.0020267, lr=0.01
+[STATS][L2] iter = 32, cost = 8192, time = 49.552, size = (1, 32, 32, 1), loss = 33.204, loss1 = 33.202, loss2 = 0.0021663, lr=0.01
+[STATS][L2] iter = 33, cost = 8448, time = 51.187, size = (1, 32, 32, 1), loss = 33.204, loss1 = 33.202, loss2 = 0.0022668, lr=0.01
+[STATS][L2] iter = 34, cost = 8704, time = 52.826, size = (1, 32, 32, 1), loss = 33.204, loss1 = 33.202, loss2 = 0.0024101, lr=0.01
+[STATS][L2] iter = 35, cost = 8960, time = 54.384, size = (1, 32, 32, 1), loss = 33.204, loss1 = 33.202, loss2 = 0.0025764, lr=0.01
+[STATS][L2] iter = 36, cost = 9216, time = 55.905, size = (1, 32, 32, 1), loss = 33.205, loss1 = 33.202, loss2 = 0.0026701, lr=0.01
+[STATS][L2] iter = 37, cost = 9472, time = 57.410, size = (1, 32, 32, 1), loss = 33.205, loss1 = 33.202, loss2 = 0.0027885, lr=0.01
+[STATS][L2] iter = 38, cost = 9728, time = 58.926, size = (1, 32, 32, 1), loss = 26.855, loss1 = 26.852, loss2 = 0.0029763, lr=0.01
+[STATS][L2] iter = 39, cost = 9984, time = 60.428, size = (1, 32, 32, 1), loss = 26.856, loss1 = 26.852, loss2 = 0.0031252, lr=0.01
+[STATS][L2] iter = 40, cost = 10240, time = 61.930, size = (1, 32, 32, 1), loss = 26.856, loss1 = 26.852, loss2 = 0.0033447, lr=0.01
+[STATS][L2] iter = 41, cost = 10496, time = 63.459, size = (1, 32, 32, 1), loss = 26.856, loss1 = 26.852, loss2 = 0.0035075, lr=0.01
+[STATS][L2] iter = 42, cost = 10752, time = 65.056, size = (1, 32, 32, 1), loss = 26.856, loss1 = 26.852, loss2 = 0.0036715, lr=0.01
+[STATS][L2] iter = 43, cost = 11008, time = 66.579, size = (1, 32, 32, 1), loss = 26.856, loss1 = 26.852, loss2 = 0.0038414, lr=0.01
+[STATS][L2] iter = 44, cost = 11264, time = 68.095, size = (1, 32, 32, 1), loss = 26.857, loss1 = 26.852, loss2 = 0.0040998, lr=0.01
+[STATS][L2] iter = 45, cost = 11520, time = 69.799, size = (1, 32, 32, 1), loss = 26.857, loss1 = 26.852, loss2 = 0.0043562, lr=0.01
+[STATS][L2] iter = 46, cost = 11776, time = 71.349, size = (1, 32, 32, 1), loss = 26.857, loss1 = 26.852, loss2 = 0.004608, lr=0.01
+[STATS][L2] iter = 47, cost = 12032, time = 72.894, size = (1, 32, 32, 1), loss = 26.857, loss1 = 26.852, loss2 = 0.0047689, lr=0.01
+[STATS][L2] iter = 48, cost = 12288, time = 74.485, size = (1, 32, 32, 1), loss = 26.858, loss1 = 26.852, loss2 = 0.0050408, lr=0.01
+[STATS][L2] iter = 49, cost = 12544, time = 76.001, size = (1, 32, 32, 1), loss = 26.858, loss1 = 26.852, loss2 = 0.0052126, lr=0.01
+[STATS][L2] iter = 50, cost = 12800, time = 77.537, size = (1, 32, 32, 1), loss = 26.858, loss1 = 26.852, loss2 = 0.0055556, lr=0.01
+[STATS][L2] iter = 51, cost = 13056, time = 79.066, size = (1, 32, 32, 1), loss = 26.858, loss1 = 26.852, loss2 = 0.0058182, lr=0.01
+[STATS][L2] iter = 52, cost = 13312, time = 80.642, size = (1, 32, 32, 1), loss = 26.859, loss1 = 26.852, loss2 = 0.0061349, lr=0.01
+[STATS][L2] iter = 53, cost = 13568, time = 82.161, size = (1, 32, 32, 1), loss = 26.859, loss1 = 26.852, loss2 = 0.0065169, lr=0.01
+[STATS][L2] iter = 54, cost = 13824, time = 83.677, size = (1, 32, 32, 1), loss = 26.859, loss1 = 26.852, loss2 = 0.0068002, lr=0.01
+[STATS][L2] iter = 55, cost = 14080, time = 85.189, size = (1, 32, 32, 1), loss = 26.86, loss1 = 26.852, loss2 = 0.0070547, lr=0.01
+[STATS][L2] iter = 56, cost = 14336, time = 86.709, size = (1, 32, 32, 1), loss = 26.86, loss1 = 26.852, loss2 = 0.0073097, lr=0.01
+[STATS][L2] iter = 57, cost = 14592, time = 88.210, size = (1, 32, 32, 1), loss = 26.86, loss1 = 26.852, loss2 = 0.0074365, lr=0.01
+[STATS][L2] iter = 58, cost = 14848, time = 89.714, size = (1, 32, 32, 1), loss = 26.86, loss1 = 26.852, loss2 = 0.0077616, lr=0.01
+[STATS][L2] iter = 59, cost = 15104, time = 91.535, size = (1, 32, 32, 1), loss = 26.861, loss1 = 26.852, loss2 = 0.0081194, lr=0.01
+[STATS][L2] iter = 60, cost = 15360, time = 93.210, size = (1, 32, 32, 1), loss = 26.861, loss1 = 26.852, loss2 = 0.0085563, lr=0.01
+[STATS][L2] iter = 61, cost = 15616, time = 94.739, size = (1, 32, 32, 1), loss = 26.861, loss1 = 26.852, loss2 = 0.0089966, lr=0.01
+[STATS][L2] iter = 62, cost = 15872, time = 96.302, size = (1, 32, 32, 1), loss = 26.862, loss1 = 26.852, loss2 = 0.0093618, lr=0.01
+[STATS][L2] iter = 63, cost = 16128, time = 97.824, size = (1, 32, 32, 1), loss = 26.862, loss1 = 26.852, loss2 = 0.0097338, lr=0.01
+[STATS][L2] iter = 64, cost = 16384, time = 99.364, size = (1, 32, 32, 1), loss = 26.863, loss1 = 26.852, loss2 = 0.010269, lr=0.01
+[STATS][L2] iter = 65, cost = 16640, time = 100.880, size = (1, 32, 32, 1), loss = 19.008, loss1 = 18.997, loss2 = 0.010593, lr=0.01
+[STATS][L2] iter = 66, cost = 16896, time = 102.407, size = (1, 32, 32, 1), loss = 19.008, loss1 = 18.997, loss2 = 0.011044, lr=0.01
+[STATS][L2] iter = 67, cost = 17152, time = 103.952, size = (1, 32, 32, 1), loss = 19.009, loss1 = 18.997, loss2 = 0.011462, lr=0.01
+[STATS][L2] iter = 68, cost = 17408, time = 105.487, size = (1, 32, 32, 1), loss = 19.009, loss1 = 18.997, loss2 = 0.01188, lr=0.01
+[STATS][L2] iter = 69, cost = 17664, time = 107.013, size = (1, 32, 32, 1), loss = 19.01, loss1 = 18.997, loss2 = 0.012425, lr=0.01
+[STATS][L2] iter = 70, cost = 17920, time = 108.523, size = (1, 32, 32, 1), loss = 19.01, loss1 = 18.997, loss2 = 0.012915, lr=0.01
+[STATS][L2] iter = 71, cost = 18176, time = 110.058, size = (1, 32, 32, 1), loss = 19.011, loss1 = 18.997, loss2 = 0.013171, lr=0.01
+[STATS][L2] iter = 72, cost = 18432, time = 111.570, size = (1, 32, 32, 1), loss = 19.011, loss1 = 18.997, loss2 = 0.013566, lr=0.01
+[STATS][L2] iter = 73, cost = 18688, time = 113.084, size = (1, 32, 32, 1), loss = 19.011, loss1 = 18.997, loss2 = 0.013915, lr=0.01
+[STATS][L2] iter = 74, cost = 18944, time = 114.680, size = (1, 32, 32, 1), loss = 19.012, loss1 = 18.997, loss2 = 0.014372, lr=0.01
+[STATS][L2] iter = 75, cost = 19200, time = 116.302, size = (1, 32, 32, 1), loss = 19.012, loss1 = 18.997, loss2 = 0.014625, lr=0.01
+[STATS][L2] iter = 76, cost = 19456, time = 118.036, size = (1, 32, 32, 1), loss = 9.8836, loss1 = 9.8688, loss2 = 0.014864, lr=0.01
+[STATS][L2] iter = 77, cost = 19712, time = 119.929, size = (1, 32, 32, 1), loss = 9.884, loss1 = 9.8688, loss2 = 0.015193, lr=0.01
+[STATS][L2] iter = 78, cost = 19968, time = 121.445, size = (1, 32, 32, 1), loss = 9.8843, loss1 = 9.8688, loss2 = 0.015487, lr=0.01
+[STATS][L2] iter = 79, cost = 20224, time = 122.979, size = (1, 32, 32, 1), loss = 9.8846, loss1 = 9.8688, loss2 = 0.015855, lr=0.01
+[STATS][L2] iter = 80, cost = 20480, time = 124.487, size = (1, 32, 32, 1), loss = 9.8852, loss1 = 9.8688, loss2 = 0.016463, lr=0.01
+[STATS][L2] iter = 81, cost = 20736, time = 126.028, size = (1, 32, 32, 1), loss = 9.8856, loss1 = 9.8688, loss2 = 0.016792, lr=0.01
+[STATS][L2] iter = 82, cost = 20992, time = 127.542, size = (1, 32, 32, 1), loss = 9.8861, loss1 = 9.8688, loss2 = 0.017351, lr=0.01
+[STATS][L2] iter = 83, cost = 21248, time = 129.250, size = (1, 32, 32, 1), loss = 0.018093, loss1 = 0, loss2 = 0.018093, lr=0.01
+saving outstep 1 and iteration 83
+[STATS][L3](Attack found!) iter = 83, cost = 21504, time = 129.250, size = (1, 32, 32, 1), loss = 0.018073, loss1 = 0, loss2 = 0.018073
+Device mapping:
+import_2/Const_16Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  6.831895233092948
+l2_distortion between inputs and adv_current  6.831895233092948
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.018092273
+perceptual metrics distance between adv_current and img 0.018092273
+normalized perceptual metrics distance between adv and img 6.282039167773392e-05
+normalized perceptual metrics distance between adv_current and img 6.282039167773392e-05
+perceptual hash difference is  10
+Saving to id2_differ10_True_l26.83_pdistance0.01809227280318737
+[STATS][L1] total = 3, id = 2, time = 274.464, success = True, const = 50.000000, hash_avg=10.00000, distortion = 6.83190, success_rate = 0.667, l2_avg=4.62554, p_avg=0.009447023447137326, iteration_avg=50.5
+import_2/Cooverall average hash  10.0
+overall average l2  4.625540744310976
+overal average perceptual distance  0.009447023447137326
+overal average iterations  50.5
+for image id  3
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.544, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 1.6095e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.085, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 3.7979e-05, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.603, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 7.7431e-05, lr=0.01
+saving outstep 0 and iteration 3
+[STATS][L2] iter = 4, cost = 1024, time = 6.121, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00011995, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.709, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00016642, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.251, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00021395, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.791, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00027916, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.308, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00033559, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.836, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00040701, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.417, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00048495, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 16.924, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00056055, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.468, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00063128, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.084, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00071215, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.639, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00080639, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 23.152, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00089697, lr=0.01
+saving outstep 0 and iteration 15
+[STATS][L2] iter = 16, cost = 4096, time = 24.697, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.001012, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.223, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.0011555, lr=0.01
+[STATS][L2] iter = 18, cost = 4608, time = 27.757, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.001283, lr=0.01
+[STATS][L2] iter = 19, cost = 4864, time = 29.273, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.0013953, lr=0.01
+[STATS][L2] iter = 20, cost = 5120, time = 30.815, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00151, lr=0.01
+[STATS][L2] iter = 21, cost = 5376, time = 32.333, size = (1, 32, 32, 1), loss = 53.707, loss1 = 53.705, loss2 = 0.0016452, lr=0.01
+[STATS][L2] iter = 22, cost = 5632, time = 33.853, size = (1, 32, 32, 1), loss = 53.707, loss1 = 53.705, loss2 = 0.0017724, lr=0.01
+[STATS][L2] iter = 23, cost = 5888, time = 35.376, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.001923, lr=0.01
+saving outstep 0 and iteration 23
+[STATS][L2] iter = 24, cost = 6144, time = 36.917, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.0020616, lr=0.01
+[STATS][L2] iter = 25, cost = 6400, time = 38.433, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.002239, lr=0.01
+[STATS][L2] iter = 26, cost = 6656, time = 40.004, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.0023921, lr=0.01
+[STATS][L2] iter = 27, cost = 6912, time = 41.569, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.002634, lr=0.01
+[STATS][L2] iter = 28, cost = 7168, time = 43.101, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.0027565, lr=0.01
+[STATS][L2] iter = 29, cost = 7424, time = 44.620, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.0029368, lr=0.01
+[STATS][L2] iter = 30, cost = 7680, time = 46.130, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.0031106, lr=0.01
+[STATS][L2] iter = 31, cost = 7936, time = 47.670, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.0032628, lr=0.01
+[STATS][L2] iter = 32, cost = 8192, time = 49.208, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.0033974, lr=0.01
+[STATS][L2] iter = 33, cost = 8448, time = 50.778, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.0035692, lr=0.01
+[STATS][L2] iter = 34, cost = 8704, time = 52.378, size = (1, 32, 32, 1), loss = 37.999, loss1 = 37.995, loss2 = 0.0036946, lr=0.01
+[STATS][L2] iter = 35, cost = 8960, time = 53.907, size = (1, 32, 32, 1), loss = 37.999, loss1 = 37.995, loss2 = 0.0038823, lr=0.01
+[STATS][L2] iter = 36, cost = 9216, time = 55.433, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0041007, lr=0.01
+saving outstep 0 and iteration 36
+[STATS][L2] iter = 37, cost = 9472, time = 56.954, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.004239, lr=0.01
+[STATS][L2] iter = 38, cost = 9728, time = 58.512, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0044014, lr=0.01
+[STATS][L2] iter = 39, cost = 9984, time = 60.036, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0045748, lr=0.01
+[STATS][L2] iter = 40, cost = 10240, time = 61.622, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.004808, lr=0.01
+[STATS][L2] iter = 41, cost = 10496, time = 63.189, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0049488, lr=0.01
+[STATS][L2] iter = 42, cost = 10752, time = 64.733, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0051156, lr=0.01
+[STATS][L2] iter = 43, cost = 11008, time = 66.282, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0052973, lr=0.01
+[STATS][L2] iter = 44, cost = 11264, time = 67.814, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0055034, lr=0.01
+[STATS][L2] iter = 45, cost = 11520, time = 69.394, size = (1, 32, 32, 1), loss = 0.0057174, loss1 = 0, loss2 = 0.0057174, lr=0.01
+saving outstep 0 and iteration 45
+[STATS][L3](First valid attack found!) iter = 45, cost = 11776, time = 69.394, size = (1, 32, 32, 1), loss = 0.005717, loss1 = 0, loss2 = 0.005717
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.704, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 1.5094e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.238, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 3.9286e-05, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.776, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 7.0023e-05, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.325, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00011087, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.842, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00016015, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.369, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00021058, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.905, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00026649, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.444, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00033168, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.983, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00039963, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.519, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00047849, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.046, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00055914, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.598, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.00066592, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.151, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.00077816, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.687, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00086535, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 23.218, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00098012, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.747, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0010991, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.269, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.001214, lr=0.01
+[STATS][L2] iter = 18, cost = 4608, time = 27.784, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0013326, lr=0.01
+[STATS][L2] iter = 19, cost = 4864, time = 29.312, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0014501, lr=0.01
+[STATS][L2] iter = 20, cost = 5120, time = 30.947, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0015545, lr=0.01
+[STATS][L2] iter = 21, cost = 5376, time = 32.586, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0016923, lr=0.01
+[STATS][L2] iter = 22, cost = 5632, time = 34.158, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0018268, lr=0.01
+[STATS][L2] iter = 23, cost = 5888, time = 35.787, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0019509, lr=0.01
+[STATS][L2] iter = 24, cost = 6144, time = 37.374, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.0021191, lr=0.01
+[STATS][L2] iter = 25, cost = 6400, time = 38.915, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.002233, lr=0.01
+[STATS][L2] iter = 26, cost = 6656, time = 40.448, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.0023683, lr=0.01
+[STATS][L2] iter = 27, cost = 6912, time = 41.973, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.0025419, lr=0.01
+[STATS][L2] iter = 28, cost = 7168, time = 43.516, size = (1, 32, 32, 1), loss = 9.8715, loss1 = 9.8688, loss2 = 0.002706, lr=0.01
+[STATS][L2] iter = 29, cost = 7424, time = 45.048, size = (1, 32, 32, 1), loss = 9.8716, loss1 = 9.8688, loss2 = 0.0028186, lr=0.01
+[STATS][L2] iter = 30, cost = 7680, time = 46.589, size = (1, 32, 32, 1), loss = 9.8718, loss1 = 9.8688, loss2 = 0.0029882, lr=0.01
+[STATS][L2] iter = 31, cost = 7936, time = 48.121, size = (1, 32, 32, 1), loss = 9.8719, loss1 = 9.8688, loss2 = 0.0031005, lr=0.01
+[STATS][L2] iter = 32, cost = 8192, time = 49.645, size = (1, 32, 32, 1), loss = 9.872, loss1 = 9.8688, loss2 = 0.003235, lr=0.01
+[STATS][L2] iter = 33, cost = 8448, time = 51.169, size = (1, 32, 32, 1), loss = 9.8722, loss1 = 9.8688, loss2 = 0.0033866, lr=0.01
+[STATS][L2] iter = 34, cost = 8704, time = 52.703, size = (1, 32, 32, 1), loss = 9.8723, loss1 = 9.8688, loss2 = 0.0035165, lr=0.01
+[STATS][L2] iter = 35, cost = 8960, time = 54.241, size = (1, 32, 32, 1), loss = 9.8724, loss1 = 9.8688, loss2 = 0.0036662, lr=0.01
+[STATS][L2] iter = 36, cost = 9216, time = 55.795, size = (1, 32, 32, 1), loss = 9.8726, loss1 = 9.8688, loss2 = 0.0038147, lr=0.01
+[STATS][L2] iter = 37, cost = 9472, time = 57.337, size = (1, 32, 32, 1), loss = 9.8727, loss1 = 9.8688, loss2 = 0.0039505, lr=0.01
+[STATS][L2] iter = 38, cost = 9728, time = 58.871, size = (1, 32, 32, 1), loss = 9.8729, loss1 = 9.8688, loss2 = 0.0040947, lr=0.01
+[STATS][L2] iter = 39, cost = 9984, time = 60.403, size = (1, 32, 32, 1), loss = 9.873, loss1 = 9.8688, loss2 = 0.004245, lr=0.01
+[STATS][L2] iter = 40, cost = 10240, time = 61.999, size = (1, 32, 32, 1), loss = 0.0043946, loss1 = 0, loss2 = 0.0043946, lr=0.01
+saving outstep 1 and iteration 40
+[STATS][L3](Attack found!) iter = 40, cost = 10496, time = 61.999, size = (1, 32, 32, 1), loss = 0.004393, loss1 = 0, loss2 = 0.004393
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  6.417807835799031
+l2_distortion between inputs and adv_current  6.417807835799031
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.0043947375
+perceptual metrics distance between adv_current and img 0.0043947375
+normalized perceptual metrics distance between adv and img 1.525950534010513e-05
+normalized perceptual metrics distance between adv_current and img 1.525950534010513e-05
+perceptual hash difference is  10
+Saving to id3_differ10_True_l26.42_pdistance0.004394737537950277
+[STATS][L1] total = 4, id = 3, time = 135.537, success = True, const = 50.000000, hash_avg=10.00000, distortion = 6.41781, success_rate = 0.750, l2_avg=5.22296, p_avg=0.0077629281440749764, iteration_avg=49.0
+ica:0/task:0/device:GPU:0
+import_3/ExpandDims_43/dim: (Cooverall average hash  10.0
+overall average l2  5.222963108140328
+overal average perceptual distance  0.0077629281440749764
+overal average iterations  49.0
+for image id  4
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.596, size = (1, 32, 32, 1), loss = 76.16, loss1 = 76.159, loss2 = 9.9655e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.133, size = (1, 32, 32, 1), loss = 76.16, loss1 = 76.159, loss2 = 0.00022146, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.674, size = (1, 32, 32, 1), loss = 76.16, loss1 = 76.159, loss2 = 0.0003883, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.215, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00063664, lr=0.01
+saving outstep 0 and iteration 4
+[STATS][L2] iter = 5, cost = 1280, time = 7.867, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.00083103, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.413, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.0011294, lr=0.01
+saving outstep 0 and iteration 6
+[STATS][L2] iter = 7, cost = 1792, time = 10.942, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.0013575, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.500, size = (1, 32, 32, 1), loss = 53.707, loss1 = 53.705, loss2 = 0.0016277, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 14.029, size = (1, 32, 32, 1), loss = 53.707, loss1 = 53.705, loss2 = 0.0018489, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.568, size = (1, 32, 32, 1), loss = 53.707, loss1 = 53.705, loss2 = 0.0021845, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.082, size = (1, 32, 32, 1), loss = 53.707, loss1 = 53.705, loss2 = 0.0024999, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.819, size = (1, 32, 32, 1), loss = 53.708, loss1 = 53.705, loss2 = 0.0027969, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.343, size = (1, 32, 32, 1), loss = 53.708, loss1 = 53.705, loss2 = 0.0030751, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.883, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.003349, lr=0.01
+saving outstep 0 and iteration 14
+[STATS][L2] iter = 15, cost = 3840, time = 23.420, size = (1, 32, 32, 1), loss = 37.999, loss1 = 37.995, loss2 = 0.0037704, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.935, size = (1, 32, 32, 1), loss = 37.999, loss1 = 37.995, loss2 = 0.0041855, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.471, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0046007, lr=0.01
+saving outstep 0 and iteration 17
+[STATS][L2] iter = 18, cost = 4608, time = 27.996, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0049668, lr=0.01
+[STATS][L2] iter = 19, cost = 4864, time = 29.509, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0053204, lr=0.01
+[STATS][L2] iter = 20, cost = 5120, time = 31.057, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0056436, lr=0.01
+[STATS][L2] iter = 21, cost = 5376, time = 32.682, size = (1, 32, 32, 1), loss = 0.0060273, loss1 = 0, loss2 = 0.0060273, lr=0.01
+saving outstep 0 and iteration 21
+[STATS][L3](First valid attack found!) iter = 21, cost = 5632, time = 32.682, size = (1, 32, 32, 1), loss = 0.0060258, loss1 = 0, loss2 = 0.0060258
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.526, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 9.0819e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.070, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0.00019704, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.661, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0.00029715, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.183, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00046425, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.713, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00059813, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.224, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.00078897, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.846, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00096048, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.367, size = (1, 32, 32, 1), loss = 26.854, loss1 = 26.852, loss2 = 0.0011877, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.883, size = (1, 32, 32, 1), loss = 26.854, loss1 = 26.852, loss2 = 0.0013901, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.449, size = (1, 32, 32, 1), loss = 26.854, loss1 = 26.852, loss2 = 0.0016328, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.001, size = (1, 32, 32, 1), loss = 26.854, loss1 = 26.852, loss2 = 0.0018968, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.524, size = (1, 32, 32, 1), loss = 26.855, loss1 = 26.852, loss2 = 0.0021177, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.033, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.0024542, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.555, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.0027858, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 23.082, size = (1, 32, 32, 1), loss = 19.001, loss1 = 18.997, loss2 = 0.0032313, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.617, size = (1, 32, 32, 1), loss = 19.001, loss1 = 18.997, loss2 = 0.0035246, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.137, size = (1, 32, 32, 1), loss = 19.001, loss1 = 18.997, loss2 = 0.0038869, lr=0.01
+[STATS][L2] iter = 18, cost = 4608, time = 27.659, size = (1, 32, 32, 1), loss = 19.002, loss1 = 18.997, loss2 = 0.0042866, lr=0.01
+[STATS][L2] iter = 19, cost = 4864, time = 29.173, size = (1, 32, 32, 1), loss = 19.002, loss1 = 18.997, loss2 = 0.0047252, lr=0.01
+[STATS][L2] iter = 20, cost = 5120, time = 30.755, size = (1, 32, 32, 1), loss = 19.003, loss1 = 18.997, loss2 = 0.0051503, lr=0.01
+[STATS][L2] iter = 21, cost = 5376, time = 32.279, size = (1, 32, 32, 1), loss = 19.003, loss1 = 18.997, loss2 = 0.0054774, lr=0.01
+[STATS][L2] iter = 22, cost = 5632, time = 33.797, size = (1, 32, 32, 1), loss = 9.8746, loss1 = 9.8688, loss2 = 0.0057955, lr=0.01
+[STATS][L2] iter = 23, cost = 5888, time = 35.322, size = (1, 32, 32, 1), loss = 9.8751, loss1 = 9.8688, loss2 = 0.0063555, lr=0.01
+[STATS][L2] iter = 24, cost = 6144, time = 36.865, size = (1, 32, 32, 1), loss = 0.0068533, loss1 = 0, loss2 = 0.0068533, lr=0.01
+do I get here
+[STATS][L3](Attack found!) iter = 24, cost = 6400, time = 36.865, size = (1, 32, 32, 1), loss = 0.0068528, loss1 = 0, loss2 = 0.0068528
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  4.612301821680194
+l2_distortion between inputs and adv_current  4.612301821680194
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.0060272063
+perceptual metrics distance between adv_current and img 0.0060272063
+normalized perceptual metrics distance between adv and img 2.0927799697447983e-05
+normalized perceptual metrics distance between adv_current and img 2.0927799697447983e-05
+perceptual hash difference is  10
+Saving to id4_differ10_True_l24.61_pdistance0.006027206312865019
+[STATS][L1] total = 5, id = 4, time = 73.529, success = True, const = 100.000000, hash_avg=10.00000, distortion = 4.61230, success_rate = 0.800, l2_avg=5.07030, p_avg=0.007328997686272487, iteration_avg=42.25
+e:GPU:0
+import_4/Mean_4/reduction_indices: (Const): /jooverall average hash  10.0
+overall average l2  5.070297786525295
+overal average perceptual distance  0.007328997686272487
+overal average iterations  42.25
+for image id  5
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.562, size = (1, 32, 32, 1), loss = 76.16, loss1 = 76.159, loss2 = 8.5367e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.088, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00022136, lr=0.01
+saving outstep 0 and iteration 2
+[STATS][L2] iter = 3, cost = 768, time = 4.613, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00043125, lr=0.01
+saving outstep 0 and iteration 3
+[STATS][L2] iter = 4, cost = 1024, time = 6.134, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00065591, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.704, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.0009358, lr=0.01
+saving outstep 0 and iteration 5
+[STATS][L2] iter = 6, cost = 1536, time = 9.334, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.0013775, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.879, size = (1, 32, 32, 1), loss = 19.739, loss1 = 19.738, loss2 = 0.0017402, lr=0.01
+saving outstep 0 and iteration 7
+[STATS][L2] iter = 8, cost = 2048, time = 12.434, size = (1, 32, 32, 1), loss = 19.74, loss1 = 19.738, loss2 = 0.0021813, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.973, size = (1, 32, 32, 1), loss = 19.74, loss1 = 19.738, loss2 = 0.0027067, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.498, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0030959, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.044, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0035205, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.575, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0039625, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.154, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0044415, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.751, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.005046, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 23.273, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0055167, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.798, size = (1, 32, 32, 1), loss = 19.744, loss1 = 19.738, loss2 = 0.0059948, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.324, size = (1, 32, 32, 1), loss = 19.744, loss1 = 19.738, loss2 = 0.0066055, lr=0.01
+[STATS][L2] iter = 18, cost = 4608, time = 27.914, size = (1, 32, 32, 1), loss = 0.0071998, loss1 = 0, loss2 = 0.0071998, lr=0.01
+saving outstep 0 and iteration 18
+[STATS][L3](First valid attack found!) iter = 18, cost = 4864, time = 27.914, size = (1, 32, 32, 1), loss = 0.0072015, loss1 = 0, loss2 = 0.0072015
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.529, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 8.8089e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.223, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00021413, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.747, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.0003935, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.294, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00066403, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.834, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.0010128, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.354, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.001404, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.885, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0016164, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.410, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.001945, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.923, size = (1, 32, 32, 1), loss = 9.8711, loss1 = 9.8688, loss2 = 0.0023054, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.465, size = (1, 32, 32, 1), loss = 9.8715, loss1 = 9.8688, loss2 = 0.0027173, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.004, size = (1, 32, 32, 1), loss = 9.8718, loss1 = 9.8688, loss2 = 0.0030715, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.587, size = (1, 32, 32, 1), loss = 9.8722, loss1 = 9.8688, loss2 = 0.0034422, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.170, size = (1, 32, 32, 1), loss = 0.0037836, loss1 = 0, loss2 = 0.0037836, lr=0.01
+saving outstep 1 and iteration 13
+[STATS][L3](Attack found!) iter = 13, cost = 3584, time = 20.170, size = (1, 32, 32, 1), loss = 0.0037856, loss1 = 0, loss2 = 0.0037856
+b:localhost/replica:0/task:0/device:GPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  3.3261819200555593
+l2_distortion between inputs and adv_current  3.3261819200555593
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.0037836365
+perceptual metrics distance between adv_current and img 0.0037836365
+normalized perceptual metrics distance between adv and img 1.3137626713917902e-05
+normalized perceptual metrics distance between adv_current and img 1.3137626713917902e-05
+perceptual hash difference is  10
+Saving to id5_differ10_True_l23.33_pdistance0.0037836364936083555
+[STATS][L1] total = 6, id = 5, time = 51.848, success = True, const = 50.000000, hash_avg=10.00000, distortion = 3.32618, success_rate = 0.833, l2_avg=4.72147, p_avg=0.006619925447739661, iteration_avg=37.6
+calhost/replica:0/task:0/device:GPU:0
+import_5/overall average hash  10.0
+overall average l2  4.721474613231348
+overal average perceptual distance  0.006619925447739661
+overal average iterations  37.6
+for image id  6
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.521, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 6.4416e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.040, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.0001503, lr=0.01
+saving outstep 0 and iteration 2
+[STATS][L2] iter = 3, cost = 768, time = 4.567, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00027464, lr=0.01
+saving outstep 0 and iteration 3
+[STATS][L2] iter = 4, cost = 1024, time = 6.090, size = (1, 32, 32, 1), loss = 37.995, loss1 = 37.995, loss2 = 0.00040794, lr=0.01
+saving outstep 0 and iteration 4
+[STATS][L2] iter = 5, cost = 1280, time = 7.614, size = (1, 32, 32, 1), loss = 37.995, loss1 = 37.995, loss2 = 0.0005726, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.133, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.00070629, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.696, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.00088676, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.227, size = (1, 32, 32, 1), loss = 19.739, loss1 = 19.738, loss2 = 0.0010727, lr=0.01
+saving outstep 0 and iteration 8
+[STATS][L2] iter = 9, cost = 2304, time = 13.807, size = (1, 32, 32, 1), loss = 19.739, loss1 = 19.738, loss2 = 0.0012483, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.334, size = (1, 32, 32, 1), loss = 19.739, loss1 = 19.738, loss2 = 0.0014423, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 16.860, size = (1, 32, 32, 1), loss = 19.739, loss1 = 19.738, loss2 = 0.001665, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.376, size = (1, 32, 32, 1), loss = 19.739, loss1 = 19.738, loss2 = 0.0018991, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 19.892, size = (1, 32, 32, 1), loss = 19.74, loss1 = 19.738, loss2 = 0.002167, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.427, size = (1, 32, 32, 1), loss = 0.0023989, loss1 = 0, loss2 = 0.0023989, lr=0.01
+saving outstep 0 and iteration 14
+[STATS][L3](First valid attack found!) iter = 14, cost = 3840, time = 21.427, size = (1, 32, 32, 1), loss = 0.0024001, loss1 = 0, loss2 = 0.0024001
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.514, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 6.1826e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.111, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00014264, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.634, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.0002335, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.155, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00038102, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.670, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00049429, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.254, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00064939, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.783, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00081576, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.323, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.0010054, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.849, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.001192, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.450, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.001386, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.018, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0015855, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.532, size = (1, 32, 32, 1), loss = 9.8705, loss1 = 9.8688, loss2 = 0.0017799, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.065, size = (1, 32, 32, 1), loss = 0.001972, loss1 = 0, loss2 = 0.001972, lr=0.01
+saving outstep 1 and iteration 13
+[STATS][L3](Attack found!) iter = 13, cost = 3584, time = 20.065, size = (1, 32, 32, 1), loss = 0.0019747, loss1 = 0, loss2 = 0.0019747
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  2.897784310703195
+l2_distortion between inputs and adv_current  2.897784310703195
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.0019718898
+perceptual metrics distance between adv_current and img 0.0019718898
+normalized perceptual metrics distance between adv and img 6.846839419773056e-06
+normalized perceptual metrics distance between adv_current and img 6.846839419773056e-06
+perceptual hash difference is  10
+Saving to id6_differ10_True_l22.90_pdistance0.00197188975289464
+[STATS][L1] total = 7, id = 6, time = 45.223, success = True, const = 50.000000, hash_avg=10.00000, distortion = 2.89778, success_rate = 0.857, l2_avg=4.41753, p_avg=0.005845252831932157, iteration_avg=33.833333333333336
+0
+imoverall average hash  10.0
+overall average l2  4.417526229476656
+overal average perceptual distance  0.005845252831932157
+overal average iterations  33.833333333333336
+for image id  7
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.546, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 4.6641e-05, lr=0.01
+saving outstep 0 and iteration 1
+[STATS][L2] iter = 2, cost = 512, time = 3.078, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 9.5235e-05, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.621, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00015158, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.144, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00023295, lr=0.01
+saving outstep 0 and iteration 4
+[STATS][L2] iter = 5, cost = 1280, time = 7.667, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00033158, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.382, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00045224, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.902, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00056844, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.425, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00066662, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.988, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00078101, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.516, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00089836, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.048, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.0010597, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.597, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.0012041, lr=0.01
+saving outstep 0 and iteration 12
+[STATS][L2] iter = 13, cost = 3328, time = 20.132, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.0013565, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.653, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.0015047, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 23.210, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.0016893, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.741, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.0018714, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.273, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.0020791, lr=0.01
+[STATS][L2] iter = 18, cost = 4608, time = 27.820, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.002268, lr=0.01
+[STATS][L2] iter = 19, cost = 4864, time = 29.338, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.002433, lr=0.01
+[STATS][L2] iter = 20, cost = 5120, time = 30.858, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.0026375, lr=0.01
+[STATS][L2] iter = 21, cost = 5376, time = 32.387, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.0028093, lr=0.01
+[STATS][L2] iter = 22, cost = 5632, time = 33.962, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.0029679, lr=0.01
+[STATS][L2] iter = 23, cost = 5888, time = 35.492, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.00315, lr=0.01
+[STATS][L2] iter = 24, cost = 6144, time = 37.025, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0033801, lr=0.01
+saving outstep 0 and iteration 24
+[STATS][L2] iter = 25, cost = 6400, time = 38.568, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0035975, lr=0.01
+[STATS][L2] iter = 26, cost = 6656, time = 40.109, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0038053, lr=0.01
+[STATS][L2] iter = 27, cost = 6912, time = 41.632, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0040246, lr=0.01
+[STATS][L2] iter = 28, cost = 7168, time = 43.155, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0042765, lr=0.01
+[STATS][L2] iter = 29, cost = 7424, time = 44.667, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0045117, lr=0.01
+[STATS][L2] iter = 30, cost = 7680, time = 46.182, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0047457, lr=0.01
+[STATS][L2] iter = 31, cost = 7936, time = 47.742, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.004947, lr=0.01
+[STATS][L2] iter = 32, cost = 8192, time = 49.319, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0051627, lr=0.01
+[STATS][L2] iter = 33, cost = 8448, time = 50.844, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0054007, lr=0.01
+[STATS][L2] iter = 34, cost = 8704, time = 52.392, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.005673, lr=0.01
+[STATS][L2] iter = 35, cost = 8960, time = 53.946, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0058788, lr=0.01
+[STATS][L2] iter = 36, cost = 9216, time = 55.495, size = (1, 32, 32, 1), loss = 19.744, loss1 = 19.738, loss2 = 0.0060726, lr=0.01
+[STATS][L2] iter = 37, cost = 9472, time = 57.080, size = (1, 32, 32, 1), loss = 19.744, loss1 = 19.738, loss2 = 0.0062552, lr=0.01
+[STATS][L2] iter = 38, cost = 9728, time = 58.619, size = (1, 32, 32, 1), loss = 19.744, loss1 = 19.738, loss2 = 0.0064444, lr=0.01
+[STATS][L2] iter = 39, cost = 9984, time = 60.206, size = (1, 32, 32, 1), loss = 19.744, loss1 = 19.738, loss2 = 0.0066435, lr=0.01
+[STATS][L2] iter = 40, cost = 10240, time = 61.746, size = (1, 32, 32, 1), loss = 19.744, loss1 = 19.738, loss2 = 0.0068492, lr=0.01
+[STATS][L2] iter = 41, cost = 10496, time = 63.274, size = (1, 32, 32, 1), loss = 19.745, loss1 = 19.738, loss2 = 0.0070225, lr=0.01
+[STATS][L2] iter = 42, cost = 10752, time = 64.880, size = (1, 32, 32, 1), loss = 19.745, loss1 = 19.738, loss2 = 0.0072656, lr=0.01
+[STATS][L2] iter = 43, cost = 11008, time = 66.472, size = (1, 32, 32, 1), loss = 19.745, loss1 = 19.738, loss2 = 0.0074384, lr=0.01
+[STATS][L2] iter = 44, cost = 11264, time = 68.029, size = (1, 32, 32, 1), loss = 0.0076619, loss1 = 0, loss2 = 0.0076619, lr=0.01
+saving outstep 0 and iteration 44
+[STATS][L3](First valid attack found!) iter = 44, cost = 11520, time = 68.029, size = (1, 32, 32, 1), loss = 0.0076598, loss1 = 0, loss2 = 0.0076598
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.562, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 3.7956e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.165, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 8.4195e-05, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.759, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00014816, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.298, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00023611, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.820, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00031606, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.516, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00043346, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 11.250, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00054296, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.790, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00066742, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 14.323, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00082176, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.853, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00092503, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.430, size = (1, 32, 32, 1), loss = 26.854, loss1 = 26.852, loss2 = 0.0010813, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.992, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0012079, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.553, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0013198, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 22.086, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0014558, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 23.626, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0015999, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 25.244, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0017685, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.819, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.001929, lr=0.01
+[STATS][L2] iter = 18, cost = 4608, time = 28.405, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.002119, lr=0.01
+[STATS][L2] iter = 19, cost = 4864, time = 29.974, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.002263, lr=0.01
+[STATS][L2] iter = 20, cost = 5120, time = 31.691, size = (1, 32, 32, 1), loss = 9.8712, loss1 = 9.8688, loss2 = 0.0024228, lr=0.01
+[STATS][L2] iter = 21, cost = 5376, time = 33.236, size = (1, 32, 32, 1), loss = 9.8714, loss1 = 9.8688, loss2 = 0.0026055, lr=0.01
+[STATS][L2] iter = 22, cost = 5632, time = 34.757, size = (1, 32, 32, 1), loss = 9.8715, loss1 = 9.8688, loss2 = 0.0027664, lr=0.01
+[STATS][L2] iter = 23, cost = 5888, time = 36.309, size = (1, 32, 32, 1), loss = 9.8717, loss1 = 9.8688, loss2 = 0.0029336, lr=0.01
+[STATS][L2] iter = 24, cost = 6144, time = 38.088, size = (1, 32, 32, 1), loss = 9.8719, loss1 = 9.8688, loss2 = 0.0030936, lr=0.01
+[STATS][L2] iter = 25, cost = 6400, time = 39.620, size = (1, 32, 32, 1), loss = 9.872, loss1 = 9.8688, loss2 = 0.0032785, lr=0.01
+[STATS][L2] iter = 26, cost = 6656, time = 41.150, size = (1, 32, 32, 1), loss = 9.8722, loss1 = 9.8688, loss2 = 0.0034501, lr=0.01
+[STATS][L2] iter = 27, cost = 6912, time = 42.685, size = (1, 32, 32, 1), loss = 9.8724, loss1 = 9.8688, loss2 = 0.0036579, lr=0.01
+[STATS][L2] iter = 28, cost = 7168, time = 44.239, size = (1, 32, 32, 1), loss = 9.8726, loss1 = 9.8688, loss2 = 0.0038472, lr=0.01
+[STATS][L2] iter = 29, cost = 7424, time = 45.845, size = (1, 32, 32, 1), loss = 9.8728, loss1 = 9.8688, loss2 = 0.0040757, lr=0.01
+[STATS][L2] iter = 30, cost = 7680, time = 47.381, size = (1, 32, 32, 1), loss = 9.8731, loss1 = 9.8688, loss2 = 0.0043419, lr=0.01
+[STATS][L2] iter = 31, cost = 7936, time = 48.900, size = (1, 32, 32, 1), loss = 9.8733, loss1 = 9.8688, loss2 = 0.004569, lr=0.01
+[STATS][L2] iter = 32, cost = 8192, time = 50.471, size = (1, 32, 32, 1), loss = 9.8736, loss1 = 9.8688, loss2 = 0.0047846, lr=0.01
+[STATS][L2] iter = 33, cost = 8448, time = 52.034, size = (1, 32, 32, 1), loss = 9.8737, loss1 = 9.8688, loss2 = 0.0049826, lr=0.01
+[STATS][L2] iter = 34, cost = 8704, time = 53.555, size = (1, 32, 32, 1), loss = 9.874, loss1 = 9.8688, loss2 = 0.0051857, lr=0.01
+[STATS][L2] iter = 35, cost = 8960, time = 55.117, size = (1, 32, 32, 1), loss = 9.8741, loss1 = 9.8688, loss2 = 0.0053631, lr=0.01
+[STATS][L2] iter = 36, cost = 9216, time = 56.657, size = (1, 32, 32, 1), loss = 9.8744, loss1 = 9.8688, loss2 = 0.0055933, lr=0.01
+[STATS][L2] iter = 37, cost = 9472, time = 58.217, size = (1, 32, 32, 1), loss = 9.8746, loss1 = 9.8688, loss2 = 0.0058264, lr=0.01
+[STATS][L2] iter = 38, cost = 9728, time = 59.839, size = (1, 32, 32, 1), loss = 0.0060394, loss1 = 0, loss2 = 0.0060394, lr=0.01
+saving outstep 1 and iteration 38
+[STATS][L3](Attack found!) iter = 38, cost = 9984, time = 59.839, size = (1, 32, 32, 1), loss = 0.0060378, loss1 = 0, loss2 = 0.0060378
+Device mapping:
+import_7/spliEarly stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  6.273122494142208
+l2_distortion between inputs and adv_current  6.273122494142208
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.006038966
+perceptual metrics distance between adv_current and img 0.006038966
+normalized perceptual metrics distance between adv and img 2.096863237157878e-05
+normalized perceptual metrics distance between adv_current and img 2.096863237157878e-05
+perceptual hash difference is  10
+Saving to id7_differ10_True_l26.27_pdistance0.0060389661230146885
+[STATS][L1] total = 8, id = 7, time = 132.153, success = True, const = 50.000000, hash_avg=10.00000, distortion = 6.27312, success_rate = 0.875, l2_avg=4.68261, p_avg=0.005872926159229662, iteration_avg=35.42857142857143
+overall average l2  4.682611410143163
+overal average perceptual distance  0.005872926159229662
+overal average iterations  35.42857142857143
+for image id  8
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.535, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.0002085, lr=0.01
+saving outstep 0 and iteration 1
+[STATS][L2] iter = 2, cost = 512, time = 3.045, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00044297, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.568, size = (1, 32, 32, 1), loss = 66.405, loss1 = 66.404, loss2 = 0.00092047, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.081, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.0014409, lr=0.01
+saving outstep 0 and iteration 4
+[STATS][L2] iter = 5, cost = 1280, time = 7.717, size = (1, 32, 32, 1), loss = 53.707, loss1 = 53.705, loss2 = 0.0021202, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.240, size = (1, 32, 32, 1), loss = 53.708, loss1 = 53.705, loss2 = 0.0026583, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.764, size = (1, 32, 32, 1), loss = 53.709, loss1 = 53.705, loss2 = 0.0037363, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.314, size = (1, 32, 32, 1), loss = 53.71, loss1 = 53.705, loss2 = 0.0046943, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.892, size = (1, 32, 32, 1), loss = 53.711, loss1 = 53.705, loss2 = 0.0057029, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.424, size = (1, 32, 32, 1), loss = 53.712, loss1 = 53.705, loss2 = 0.0067541, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 16.941, size = (1, 32, 32, 1), loss = 53.713, loss1 = 53.705, loss2 = 0.0079018, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.461, size = (1, 32, 32, 1), loss = 38.004, loss1 = 37.995, loss2 = 0.0092545, lr=0.01
+saving outstep 0 and iteration 12
+[STATS][L2] iter = 13, cost = 3328, time = 19.980, size = (1, 32, 32, 1), loss = 38.005, loss1 = 37.995, loss2 = 0.010513, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.516, size = (1, 32, 32, 1), loss = 38.007, loss1 = 37.995, loss2 = 0.011655, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 23.095, size = (1, 32, 32, 1), loss = 38.008, loss1 = 37.995, loss2 = 0.013287, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.732, size = (1, 32, 32, 1), loss = 38.009, loss1 = 37.995, loss2 = 0.014389, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.325, size = (1, 32, 32, 1), loss = 38.01, loss1 = 37.995, loss2 = 0.015353, lr=0.01
+[STATS][L2] iter = 18, cost = 4608, time = 27.936, size = (1, 32, 32, 1), loss = 38.012, loss1 = 37.995, loss2 = 0.016914, lr=0.01
+[STATS][L2] iter = 19, cost = 4864, time = 29.466, size = (1, 32, 32, 1), loss = 38.013, loss1 = 37.995, loss2 = 0.018076, lr=0.01
+[STATS][L2] iter = 20, cost = 5120, time = 31.052, size = (1, 32, 32, 1), loss = 38.014, loss1 = 37.995, loss2 = 0.019348, lr=0.01
+[STATS][L2] iter = 21, cost = 5376, time = 32.640, size = (1, 32, 32, 1), loss = 38.016, loss1 = 37.995, loss2 = 0.021419, lr=0.01
+[STATS][L2] iter = 22, cost = 5632, time = 34.210, size = (1, 32, 32, 1), loss = 38.017, loss1 = 37.995, loss2 = 0.022481, lr=0.01
+[STATS][L2] iter = 23, cost = 5888, time = 35.723, size = (1, 32, 32, 1), loss = 38.019, loss1 = 37.995, loss2 = 0.024398, lr=0.01
+[STATS][L2] iter = 24, cost = 6144, time = 37.324, size = (1, 32, 32, 1), loss = 38.02, loss1 = 37.995, loss2 = 0.025484, lr=0.01
+[STATS][L2] iter = 25, cost = 6400, time = 38.858, size = (1, 32, 32, 1), loss = 19.764, loss1 = 19.738, loss2 = 0.026878, lr=0.01
+saving outstep 0 and iteration 25
+[STATS][L2] iter = 26, cost = 6656, time = 40.597, size = (1, 32, 32, 1), loss = 19.765, loss1 = 19.738, loss2 = 0.027955, lr=0.01
+[STATS][L2] iter = 27, cost = 6912, time = 42.134, size = (1, 32, 32, 1), loss = 19.766, loss1 = 19.738, loss2 = 0.028063, lr=0.01
+[STATS][L2] iter = 28, cost = 7168, time = 43.713, size = (1, 32, 32, 1), loss = 19.767, loss1 = 19.738, loss2 = 0.029455, lr=0.01
+[STATS][L2] iter = 29, cost = 7424, time = 45.244, size = (1, 32, 32, 1), loss = 19.769, loss1 = 19.738, loss2 = 0.031082, lr=0.01
+[STATS][L2] iter = 30, cost = 7680, time = 46.761, size = (1, 32, 32, 1), loss = 19.77, loss1 = 19.738, loss2 = 0.032004, lr=0.01
+[STATS][L2] iter = 31, cost = 7936, time = 48.286, size = (1, 32, 32, 1), loss = 19.771, loss1 = 19.738, loss2 = 0.033004, lr=0.01
+[STATS][L2] iter = 32, cost = 8192, time = 49.805, size = (1, 32, 32, 1), loss = 19.772, loss1 = 19.738, loss2 = 0.034005, lr=0.01
+[STATS][L2] iter = 33, cost = 8448, time = 51.342, size = (1, 32, 32, 1), loss = 19.773, loss1 = 19.738, loss2 = 0.035466, lr=0.01
+[STATS][L2] iter = 34, cost = 8704, time = 53.016, size = (1, 32, 32, 1), loss = 19.774, loss1 = 19.738, loss2 = 0.036378, lr=0.01
+[STATS][L2] iter = 35, cost = 8960, time = 54.622, size = (1, 32, 32, 1), loss = 19.775, loss1 = 19.738, loss2 = 0.037531, lr=0.01
+[STATS][L2] iter = 36, cost = 9216, time = 56.142, size = (1, 32, 32, 1), loss = 19.776, loss1 = 19.738, loss2 = 0.038568, lr=0.01
+[STATS][L2] iter = 37, cost = 9472, time = 57.659, size = (1, 32, 32, 1), loss = 19.777, loss1 = 19.738, loss2 = 0.03958, lr=0.01
+[STATS][L2] iter = 38, cost = 9728, time = 59.178, size = (1, 32, 32, 1), loss = 19.778, loss1 = 19.738, loss2 = 0.040297, lr=0.01
+[STATS][L2] iter = 39, cost = 9984, time = 60.696, size = (1, 32, 32, 1), loss = 19.779, loss1 = 19.738, loss2 = 0.041307, lr=0.01
+[STATS][L2] iter = 40, cost = 10240, time = 62.404, size = (1, 32, 32, 1), loss = 19.78, loss1 = 19.738, loss2 = 0.042201, lr=0.01
+[STATS][L2] iter = 41, cost = 10496, time = 63.973, size = (1, 32, 32, 1), loss = 19.781, loss1 = 19.738, loss2 = 0.043441, lr=0.01
+[STATS][L2] iter = 42, cost = 10752, time = 65.498, size = (1, 32, 32, 1), loss = 19.782, loss1 = 19.738, loss2 = 0.044321, lr=0.01
+[STATS][L2] iter = 43, cost = 11008, time = 67.015, size = (1, 32, 32, 1), loss = 19.783, loss1 = 19.738, loss2 = 0.045217, lr=0.01
+[STATS][L2] iter = 44, cost = 11264, time = 68.532, size = (1, 32, 32, 1), loss = 19.784, loss1 = 19.738, loss2 = 0.046338, lr=0.01
+[STATS][L2] iter = 45, cost = 11520, time = 70.054, size = (1, 32, 32, 1), loss = 19.785, loss1 = 19.738, loss2 = 0.047408, lr=0.01
+[STATS][L2] iter = 46, cost = 11776, time = 71.582, size = (1, 32, 32, 1), loss = 19.786, loss1 = 19.738, loss2 = 0.048358, lr=0.01
+[STATS][L2] iter = 47, cost = 12032, time = 73.100, size = (1, 32, 32, 1), loss = 19.787, loss1 = 19.738, loss2 = 0.049308, lr=0.01
+[STATS][L2] iter = 48, cost = 12288, time = 74.632, size = (1, 32, 32, 1), loss = 19.788, loss1 = 19.738, loss2 = 0.050466, lr=0.01
+[STATS][L2] iter = 49, cost = 12544, time = 76.143, size = (1, 32, 32, 1), loss = 19.789, loss1 = 19.738, loss2 = 0.05123, lr=0.01
+[STATS][L2] iter = 50, cost = 12800, time = 77.692, size = (1, 32, 32, 1), loss = 19.79, loss1 = 19.738, loss2 = 0.052074, lr=0.01
+[STATS][L2] iter = 51, cost = 13056, time = 79.215, size = (1, 32, 32, 1), loss = 19.791, loss1 = 19.738, loss2 = 0.053078, lr=0.01
+[STATS][L2] iter = 52, cost = 13312, time = 80.733, size = (1, 32, 32, 1), loss = 19.791, loss1 = 19.738, loss2 = 0.053868, lr=0.01
+[STATS][L2] iter = 53, cost = 13568, time = 82.288, size = (1, 32, 32, 1), loss = 19.792, loss1 = 19.738, loss2 = 0.054596, lr=0.01
+[STATS][L2] iter = 54, cost = 13824, time = 83.809, size = (1, 32, 32, 1), loss = 19.793, loss1 = 19.738, loss2 = 0.055547, lr=0.01
+[STATS][L2] iter = 55, cost = 14080, time = 85.345, size = (1, 32, 32, 1), loss = 19.794, loss1 = 19.738, loss2 = 0.056363, lr=0.01
+[STATS][L2] iter = 56, cost = 14336, time = 86.882, size = (1, 32, 32, 1), loss = 19.795, loss1 = 19.738, loss2 = 0.057114, lr=0.01
+[STATS][L2] iter = 57, cost = 14592, time = 88.404, size = (1, 32, 32, 1), loss = 19.796, loss1 = 19.738, loss2 = 0.057996, lr=0.01
+[STATS][L2] iter = 58, cost = 14848, time = 89.937, size = (1, 32, 32, 1), loss = 19.796, loss1 = 19.738, loss2 = 0.058633, lr=0.01
+[STATS][L2] iter = 59, cost = 15104, time = 91.455, size = (1, 32, 32, 1), loss = 19.797, loss1 = 19.738, loss2 = 0.059196, lr=0.01
+[STATS][L2] iter = 60, cost = 15360, time = 92.970, size = (1, 32, 32, 1), loss = 19.798, loss1 = 19.738, loss2 = 0.060027, lr=0.01
+[STATS][L2] iter = 61, cost = 15616, time = 94.497, size = (1, 32, 32, 1), loss = 19.798, loss1 = 19.738, loss2 = 0.060455, lr=0.01
+[STATS][L2] iter = 62, cost = 15872, time = 96.046, size = (1, 32, 32, 1), loss = 19.799, loss1 = 19.738, loss2 = 0.06101, lr=0.01
+[STATS][L2] iter = 63, cost = 16128, time = 97.647, size = (1, 32, 32, 1), loss = 19.799, loss1 = 19.738, loss2 = 0.061918, lr=0.01
+[STATS][L2] iter = 64, cost = 16384, time = 99.159, size = (1, 32, 32, 1), loss = 19.8, loss1 = 19.738, loss2 = 0.062377, lr=0.01
+[STATS][L2] iter = 65, cost = 16640, time = 100.678, size = (1, 32, 32, 1), loss = 19.801, loss1 = 19.738, loss2 = 0.063101, lr=0.01
+[STATS][L2] iter = 66, cost = 16896, time = 102.186, size = (1, 32, 32, 1), loss = 19.801, loss1 = 19.738, loss2 = 0.063602, lr=0.01
+[STATS][L2] iter = 67, cost = 17152, time = 103.720, size = (1, 32, 32, 1), loss = 19.802, loss1 = 19.738, loss2 = 0.063993, lr=0.01
+[STATS][L2] iter = 68, cost = 17408, time = 105.241, size = (1, 32, 32, 1), loss = 19.802, loss1 = 19.738, loss2 = 0.064568, lr=0.01
+[STATS][L2] iter = 69, cost = 17664, time = 106.765, size = (1, 32, 32, 1), loss = 19.803, loss1 = 19.738, loss2 = 0.065219, lr=0.01
+[STATS][L2] iter = 70, cost = 17920, time = 108.293, size = (1, 32, 32, 1), loss = 19.803, loss1 = 19.738, loss2 = 0.065847, lr=0.01
+[STATS][L2] iter = 71, cost = 18176, time = 109.820, size = (1, 32, 32, 1), loss = 19.804, loss1 = 19.738, loss2 = 0.066144, lr=0.01
+[STATS][L2] iter = 72, cost = 18432, time = 111.348, size = (1, 32, 32, 1), loss = 19.804, loss1 = 19.738, loss2 = 0.06688, lr=0.01
+[STATS][L2] iter = 73, cost = 18688, time = 112.853, size = (1, 32, 32, 1), loss = 19.805, loss1 = 19.738, loss2 = 0.067342, lr=0.01
+[STATS][L2] iter = 74, cost = 18944, time = 114.365, size = (1, 32, 32, 1), loss = 0.067643, loss1 = 0, loss2 = 0.067643, lr=0.01
+saving outstep 0 and iteration 74
+[STATS][L3](First valid attack found!) iter = 74, cost = 19200, time = 114.365, size = (1, 32, 32, 1), loss = 0.067647, loss1 = 0, loss2 = 0.067647
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.527, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00019593, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.044, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00055915, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.574, size = (1, 32, 32, 1), loss = 33.203, loss1 = 33.202, loss2 = 0.0010614, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.113, size = (1, 32, 32, 1), loss = 26.854, loss1 = 26.852, loss2 = 0.0017985, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.646, size = (1, 32, 32, 1), loss = 26.855, loss1 = 26.852, loss2 = 0.0025247, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.168, size = (1, 32, 32, 1), loss = 26.856, loss1 = 26.852, loss2 = 0.0038093, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.698, size = (1, 32, 32, 1), loss = 26.857, loss1 = 26.852, loss2 = 0.0046712, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.235, size = (1, 32, 32, 1), loss = 26.858, loss1 = 26.852, loss2 = 0.0056597, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.773, size = (1, 32, 32, 1), loss = 26.859, loss1 = 26.852, loss2 = 0.0068124, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.302, size = (1, 32, 32, 1), loss = 26.86, loss1 = 26.852, loss2 = 0.0078371, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 16.842, size = (1, 32, 32, 1), loss = 26.861, loss1 = 26.852, loss2 = 0.0089893, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.373, size = (1, 32, 32, 1), loss = 19.007, loss1 = 18.997, loss2 = 0.0095771, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 19.898, size = (1, 32, 32, 1), loss = 19.008, loss1 = 18.997, loss2 = 0.01027, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.413, size = (1, 32, 32, 1), loss = 19.008, loss1 = 18.997, loss2 = 0.010832, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 22.934, size = (1, 32, 32, 1), loss = 19.01, loss1 = 18.997, loss2 = 0.012437, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.453, size = (1, 32, 32, 1), loss = 19.011, loss1 = 18.997, loss2 = 0.013755, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 25.988, size = (1, 32, 32, 1), loss = 19.013, loss1 = 18.997, loss2 = 0.015168, lr=0.01
+[STATS][L2] iter = 18, cost = 4608, time = 27.510, size = (1, 32, 32, 1), loss = 19.014, loss1 = 18.997, loss2 = 0.016358, lr=0.01
+[STATS][L2] iter = 19, cost = 4864, time = 29.039, size = (1, 32, 32, 1), loss = 19.015, loss1 = 18.997, loss2 = 0.017969, lr=0.01
+[STATS][L2] iter = 20, cost = 5120, time = 30.585, size = (1, 32, 32, 1), loss = 19.017, loss1 = 18.997, loss2 = 0.019326, lr=0.01
+[STATS][L2] iter = 21, cost = 5376, time = 32.116, size = (1, 32, 32, 1), loss = 19.018, loss1 = 18.997, loss2 = 0.020277, lr=0.01
+[STATS][L2] iter = 22, cost = 5632, time = 33.639, size = (1, 32, 32, 1), loss = 19.018, loss1 = 18.997, loss2 = 0.021005, lr=0.01
+[STATS][L2] iter = 23, cost = 5888, time = 35.158, size = (1, 32, 32, 1), loss = 19.02, loss1 = 18.997, loss2 = 0.022272, lr=0.01
+[STATS][L2] iter = 24, cost = 6144, time = 36.693, size = (1, 32, 32, 1), loss = 19.021, loss1 = 18.997, loss2 = 0.023739, lr=0.01
+[STATS][L2] iter = 25, cost = 6400, time = 38.236, size = (1, 32, 32, 1), loss = 9.8936, loss1 = 9.8688, loss2 = 0.024837, lr=0.01
+[STATS][L2] iter = 26, cost = 6656, time = 39.786, size = (1, 32, 32, 1), loss = 9.8938, loss1 = 9.8688, loss2 = 0.025081, lr=0.01
+[STATS][L2] iter = 27, cost = 6912, time = 41.327, size = (1, 32, 32, 1), loss = 9.8949, loss1 = 9.8688, loss2 = 0.026171, lr=0.01
+[STATS][L2] iter = 28, cost = 7168, time = 42.841, size = (1, 32, 32, 1), loss = 9.8962, loss1 = 9.8688, loss2 = 0.027417, lr=0.01
+[STATS][L2] iter = 29, cost = 7424, time = 44.363, size = (1, 32, 32, 1), loss = 9.8973, loss1 = 9.8688, loss2 = 0.02854, lr=0.01
+[STATS][L2] iter = 30, cost = 7680, time = 45.893, size = (1, 32, 32, 1), loss = 9.8985, loss1 = 9.8688, loss2 = 0.029724, lr=0.01
+[STATS][L2] iter = 31, cost = 7936, time = 47.413, size = (1, 32, 32, 1), loss = 9.8996, loss1 = 9.8688, loss2 = 0.030785, lr=0.01
+[STATS][L2] iter = 32, cost = 8192, time = 49.105, size = (1, 32, 32, 1), loss = 9.9003, loss1 = 9.8688, loss2 = 0.031517, lr=0.01
+[STATS][L2] iter = 33, cost = 8448, time = 50.646, size = (1, 32, 32, 1), loss = 9.9011, loss1 = 9.8688, loss2 = 0.032318, lr=0.01
+[STATS][L2] iter = 34, cost = 8704, time = 52.178, size = (1, 32, 32, 1), loss = 9.9017, loss1 = 9.8688, loss2 = 0.03297, lr=0.01
+[STATS][L2] iter = 35, cost = 8960, time = 53.711, size = (1, 32, 32, 1), loss = 9.9026, loss1 = 9.8688, loss2 = 0.033831, lr=0.01
+[STATS][L2] iter = 36, cost = 9216, time = 55.245, size = (1, 32, 32, 1), loss = 9.9036, loss1 = 9.8688, loss2 = 0.034837, lr=0.01
+[STATS][L2] iter = 37, cost = 9472, time = 56.768, size = (1, 32, 32, 1), loss = 9.9045, loss1 = 9.8688, loss2 = 0.035756, lr=0.01
+[STATS][L2] iter = 38, cost = 9728, time = 58.305, size = (1, 32, 32, 1), loss = 9.9054, loss1 = 9.8688, loss2 = 0.036596, lr=0.01
+[STATS][L2] iter = 39, cost = 9984, time = 59.832, size = (1, 32, 32, 1), loss = 9.9067, loss1 = 9.8688, loss2 = 0.037886, lr=0.01
+[STATS][L2] iter = 40, cost = 10240, time = 61.357, size = (1, 32, 32, 1), loss = 9.9076, loss1 = 9.8688, loss2 = 0.038791, lr=0.01
+[STATS][L2] iter = 41, cost = 10496, time = 62.876, size = (1, 32, 32, 1), loss = 9.9089, loss1 = 9.8688, loss2 = 0.040174, lr=0.01
+[STATS][L2] iter = 42, cost = 10752, time = 64.394, size = (1, 32, 32, 1), loss = 9.9099, loss1 = 9.8688, loss2 = 0.041162, lr=0.01
+[STATS][L2] iter = 43, cost = 11008, time = 65.935, size = (1, 32, 32, 1), loss = 9.9109, loss1 = 9.8688, loss2 = 0.04211, lr=0.01
+[STATS][L2] iter = 44, cost = 11264, time = 67.449, size = (1, 32, 32, 1), loss = 9.9117, loss1 = 9.8688, loss2 = 0.042928, lr=0.01
+[STATS][L2] iter = 45, cost = 11520, time = 68.996, size = (1, 32, 32, 1), loss = 9.9125, loss1 = 9.8688, loss2 = 0.043747, lr=0.01
+[STATS][L2] iter = 46, cost = 11776, time = 70.506, size = (1, 32, 32, 1), loss = 9.9129, loss1 = 9.8688, loss2 = 0.044157, lr=0.01
+[STATS][L2] iter = 47, cost = 12032, time = 72.025, size = (1, 32, 32, 1), loss = 9.9134, loss1 = 9.8688, loss2 = 0.044634, lr=0.01
+[STATS][L2] iter = 48, cost = 12288, time = 73.542, size = (1, 32, 32, 1), loss = 9.9146, loss1 = 9.8688, loss2 = 0.0458, lr=0.01
+[STATS][L2] iter = 49, cost = 12544, time = 75.133, size = (1, 32, 32, 1), loss = 9.9155, loss1 = 9.8688, loss2 = 0.046769, lr=0.01
+[STATS][L2] iter = 50, cost = 12800, time = 76.694, size = (1, 32, 32, 1), loss = 9.9165, loss1 = 9.8688, loss2 = 0.047764, lr=0.01
+[STATS][L2] iter = 51, cost = 13056, time = 78.212, size = (1, 32, 32, 1), loss = 9.9173, loss1 = 9.8688, loss2 = 0.048555, lr=0.01
+[STATS][L2] iter = 52, cost = 13312, time = 79.755, size = (1, 32, 32, 1), loss = 9.9184, loss1 = 9.8688, loss2 = 0.049666, lr=0.01
+[STATS][L2] iter = 53, cost = 13568, time = 81.261, size = (1, 32, 32, 1), loss = 9.9191, loss1 = 9.8688, loss2 = 0.050361, lr=0.01
+[STATS][L2] iter = 54, cost = 13824, time = 82.785, size = (1, 32, 32, 1), loss = 9.92, loss1 = 9.8688, loss2 = 0.051269, lr=0.01
+[STATS][L2] iter = 55, cost = 14080, time = 84.301, size = (1, 32, 32, 1), loss = 0.051928, loss1 = 0, loss2 = 0.051928, lr=0.01
+saving outstep 1 and iteration 55
+[STATS][L3](Attack found!) iter = 55, cost = 14336, time = 84.301, size = (1, 32, 32, 1), loss = 0.051926, loss1 = 0, loss2 = 0.051926
+device:GPU:0
+Device mapping:
+import_8/Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  8.571795221538052
+l2_distortion between inputs and adv_current  8.571795221538052
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.051927187
+perceptual metrics distance between adv_current and img 0.051927187
+normalized perceptual metrics distance between adv and img 0.00018030273107190928
+normalized perceptual metrics distance between adv_current and img 0.00018030273107190928
+perceptual hash difference is  10
+Saving to id8_differ10_True_l28.57_pdistance0.05192718654870987
+[STATS][L1] total = 9, id = 8, time = 203.272, success = True, const = 50.000000, hash_avg=10.00000, distortion = 8.57180, success_rate = 0.889, l2_avg=5.16876, p_avg=0.011629708707914688, iteration_avg=40.375
+impoverall average hash  10.0
+overall average l2  5.168759386567524
+overal average perceptual distance  0.011629708707914688
+overal average iterations  40.375
+for image id  9
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.527, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 6.1614e-05, lr=0.01
+saving outstep 0 and iteration 1
+[STATS][L2] iter = 2, cost = 512, time = 3.058, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00014384, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.609, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00023827, lr=0.01
+saving outstep 0 and iteration 3
+[STATS][L2] iter = 4, cost = 1024, time = 6.125, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00035296, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.641, size = (1, 32, 32, 1), loss = 37.995, loss1 = 37.995, loss2 = 0.00047188, lr=0.01
+saving outstep 0 and iteration 5
+[STATS][L2] iter = 6, cost = 1536, time = 9.156, size = (1, 32, 32, 1), loss = 19.738, loss1 = 19.738, loss2 = 0.00061477, lr=0.01
+saving outstep 0 and iteration 6
+[STATS][L2] iter = 7, cost = 1792, time = 10.680, size = (1, 32, 32, 1), loss = 19.738, loss1 = 19.738, loss2 = 0.00078721, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.232, size = (1, 32, 32, 1), loss = 0.00091009, loss1 = 0, loss2 = 0.00091009, lr=0.01
+saving outstep 0 and iteration 8
+[STATS][L3](First valid attack found!) iter = 8, cost = 2304, time = 12.232, size = (1, 32, 32, 1), loss = 0.00091052, loss1 = 0, loss2 = 0.00091052
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.507, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 5.7967e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.037, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00012787, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.644, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00023756, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.178, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00035133, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.708, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00046751, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.239, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.0005813, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.757, size = (1, 32, 32, 1), loss = 9.8695, loss1 = 9.8688, loss2 = 0.0007271, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.294, size = (1, 32, 32, 1), loss = 9.8696, loss1 = 9.8688, loss2 = 0.0008689, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.803, size = (1, 32, 32, 1), loss = 9.8698, loss1 = 9.8688, loss2 = 0.0010051, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.328, size = (1, 32, 32, 1), loss = 0.0011752, loss1 = 0, loss2 = 0.0011752, lr=0.01
+do I get here
+[STATS][L3](Attack found!) iter = 10, cost = 2816, time = 15.328, size = (1, 32, 32, 1), loss = 0.0011764, loss1 = 0, loss2 = 0.0011764
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  2.267518265124445
+l2_distortion between inputs and adv_current  2.267518265124445
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.00090989
+perceptual metrics distance between adv_current and img 0.00090989
+normalized perceptual metrics distance between adv and img 3.1593402430492765e-06
+normalized perceptual metrics distance between adv_current and img 3.1593402430492765e-06
+perceptual hash difference is  10
+Saving to id9_differ10_True_l22.27_pdistance0.0009098899899981916
+[STATS][L1] total = 10, id = 9, time = 31.336, success = True, const = 100.000000, hash_avg=10.00000, distortion = 2.26752, success_rate = 0.900, l2_avg=4.84640, p_avg=0.010438617739257298, iteration_avg=36.888888888888886
+calhost/replica:0/task:0/device:GPU:0
+overall average l2  4.846399261962738
+overal average perceptual distance  0.010438617739257298
+overal average iterations  36.888888888888886
+for image id  10
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.527, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 5.1603e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.130, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00015344, lr=0.01
+saving outstep 0 and iteration 2
+[STATS][L2] iter = 3, cost = 768, time = 4.657, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00025306, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.182, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00043616, lr=0.01
+saving outstep 0 and iteration 4
+[STATS][L2] iter = 5, cost = 1280, time = 7.718, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00071, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.253, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.0010109, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.794, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.0013636, lr=0.01
+saving outstep 0 and iteration 7
+[STATS][L2] iter = 8, cost = 2048, time = 12.488, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.001701, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 14.020, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.0020817, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.557, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.002646, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.077, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0031208, lr=0.01
+saving outstep 0 and iteration 11
+[STATS][L2] iter = 12, cost = 3072, time = 18.601, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0035145, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.169, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0040933, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.696, size = (1, 32, 32, 1), loss = 0.0043434, loss1 = 0, loss2 = 0.0043434, lr=0.01
+saving outstep 0 and iteration 14
+[STATS][L3](First valid attack found!) iter = 14, cost = 3840, time = 21.696, size = (1, 32, 32, 1), loss = 0.0043443, loss1 = 0, loss2 = 0.0043443
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.538, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 7.1749e-05, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.058, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00017232, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.587, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00031249, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.127, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00041113, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.741, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.0005958, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.255, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00084925, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.770, size = (1, 32, 32, 1), loss = 26.854, loss1 = 26.852, loss2 = 0.0011642, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.299, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0014997, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.858, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0018547, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.439, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.002285, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 16.966, size = (1, 32, 32, 1), loss = 9.8714, loss1 = 9.8688, loss2 = 0.0026807, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.554, size = (1, 32, 32, 1), loss = 9.8718, loss1 = 9.8688, loss2 = 0.0030687, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.079, size = (1, 32, 32, 1), loss = 9.8723, loss1 = 9.8688, loss2 = 0.0035206, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.604, size = (1, 32, 32, 1), loss = 0.0039399, loss1 = 0, loss2 = 0.0039399, lr=0.01
+saving outstep 1 and iteration 14
+[STATS][L3](Attack found!) iter = 14, cost = 3840, time = 21.604, size = (1, 32, 32, 1), loss = 0.0039408, loss1 = 0, loss2 = 0.0039408
+st/replica:0/task:0/device:GPU:0
+Device mapping:
+import_Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  3.2454639080215664
+l2_distortion between inputs and adv_current  3.2454639080215664
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.0039400808
+perceptual metrics distance between adv_current and img 0.0039400808
+normalized perceptual metrics distance between adv and img 1.3680835965917342e-05
+normalized perceptual metrics distance between adv_current and img 1.3680835965917342e-05
+perceptual hash difference is  10
+Saving to id10_differ10_True_l23.25_pdistance0.0039400807581841946
+[STATS][L1] total = 11, id = 10, time = 47.114, success = True, const = 50.000000, hash_avg=10.00000, distortion = 3.24546, success_rate = 0.909, l2_avg=4.68631, p_avg=0.009788764041149988, iteration_avg=34.7
+overall average l2  4.686305726568621
+overal average perceptual distance  0.009788764041149988
+overal average iterations  34.7
+for image id  11
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.524, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00010588, lr=0.01
+saving outstep 0 and iteration 1
+[STATS][L2] iter = 2, cost = 512, time = 3.109, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00023269, lr=0.01
+saving outstep 0 and iteration 2
+[STATS][L2] iter = 3, cost = 768, time = 4.632, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.0003925, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.145, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00053156, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.665, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00073514, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.201, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.00098874, lr=0.01
+saving outstep 0 and iteration 6
+[STATS][L2] iter = 7, cost = 1792, time = 10.817, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.0012804, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.353, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.0015209, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.916, size = (1, 32, 32, 1), loss = 19.739, loss1 = 19.738, loss2 = 0.0017585, lr=0.01
+saving outstep 0 and iteration 9
+[STATS][L2] iter = 10, cost = 2560, time = 15.455, size = (1, 32, 32, 1), loss = 19.74, loss1 = 19.738, loss2 = 0.0020306, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 17.065, size = (1, 32, 32, 1), loss = 19.74, loss1 = 19.738, loss2 = 0.0023265, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.592, size = (1, 32, 32, 1), loss = 19.74, loss1 = 19.738, loss2 = 0.0026868, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 20.190, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0030894, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.719, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0035221, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 23.247, size = (1, 32, 32, 1), loss = 19.741, loss1 = 19.738, loss2 = 0.0039336, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.780, size = (1, 32, 32, 1), loss = 19.742, loss1 = 19.738, loss2 = 0.0044082, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 26.304, size = (1, 32, 32, 1), loss = 0.0047499, loss1 = 0, loss2 = 0.0047499, lr=0.01
+saving outstep 0 and iteration 17
+[STATS][L3](First valid attack found!) iter = 17, cost = 4608, time = 26.304, size = (1, 32, 32, 1), loss = 0.0047473, loss1 = 0, loss2 = 0.0047473
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.524, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00011781, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.050, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00029699, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.568, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00046405, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.099, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00069367, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.622, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00095202, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.147, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0012654, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.660, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0016163, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.188, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0019837, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.773, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.0023311, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.298, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.0027036, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 16.811, size = (1, 32, 32, 1), loss = 9.872, loss1 = 9.8688, loss2 = 0.0031859, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.341, size = (1, 32, 32, 1), loss = 9.8725, loss1 = 9.8688, loss2 = 0.0037501, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 19.865, size = (1, 32, 32, 1), loss = 9.8731, loss1 = 9.8688, loss2 = 0.0043127, lr=0.01
+[STATS][L2] iter = 14, cost = 3584, time = 21.377, size = (1, 32, 32, 1), loss = 9.8736, loss1 = 9.8688, loss2 = 0.0048656, lr=0.01
+[STATS][L2] iter = 15, cost = 3840, time = 22.909, size = (1, 32, 32, 1), loss = 9.8743, loss1 = 9.8688, loss2 = 0.0054836, lr=0.01
+[STATS][L2] iter = 16, cost = 4096, time = 24.430, size = (1, 32, 32, 1), loss = 9.8747, loss1 = 9.8688, loss2 = 0.005923, lr=0.01
+[STATS][L2] iter = 17, cost = 4352, time = 25.999, size = (1, 32, 32, 1), loss = 0.0067365, loss1 = 0, loss2 = 0.0067365, lr=0.01
+do I get here
+[STATS][L3](Attack found!) iter = 17, cost = 4608, time = 25.999, size = (1, 32, 32, 1), loss = 0.0067342, loss1 = 0, loss2 = 0.0067342
+ce:GPU:0
+Device mapping:
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  3.940541079486883
+l2_distortion between inputs and adv_current  3.940541079486883
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.004749896
+perceptual metrics distance between adv_current and img 0.004749896
+normalized perceptual metrics distance between adv and img 1.649269446109732e-05
+normalized perceptual metrics distance between adv_current and img 1.649269446109732e-05
+perceptual hash difference is  10
+Saving to id11_differ10_True_l23.94_pdistance0.004749896004796028
+[STATS][L1] total = 12, id = 11, time = 56.269, success = True, const = 100.000000, hash_avg=10.00000, distortion = 3.94054, success_rate = 0.917, l2_avg=4.61851, p_avg=0.009330685128754174, iteration_avg=33.18181818181818
+task:0/device:GPU:0
+import_11/ExpandDims_42/dim: (Const)overall average hash  10.0
+overall average l2  4.6185089404702815
+overal average perceptual distance  0.009330685128754174
+overal average iterations  33.18181818181818
+for image id  12
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.551, size = (1, 32, 32, 1), loss = 76.16, loss1 = 76.159, loss2 = 0.00010438, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.291, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00027317, lr=0.01
+saving outstep 0 and iteration 2
+[STATS][L2] iter = 3, cost = 768, time = 4.800, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.0004716, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.324, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00070404, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.889, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00094052, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.434, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.0012081, lr=0.01
+saving outstep 0 and iteration 6
+[STATS][L2] iter = 7, cost = 1792, time = 10.964, size = (1, 32, 32, 1), loss = 37.996, loss1 = 37.995, loss2 = 0.0015522, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.530, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.001901, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 14.056, size = (1, 32, 32, 1), loss = 19.74, loss1 = 19.738, loss2 = 0.00246, lr=0.01
+saving outstep 0 and iteration 9
+[STATS][L2] iter = 10, cost = 2560, time = 15.579, size = (1, 32, 32, 1), loss = 0.0029924, loss1 = 0, loss2 = 0.0029924, lr=0.01
+saving outstep 0 and iteration 10
+[STATS][L3](First valid attack found!) iter = 10, cost = 2816, time = 15.579, size = (1, 32, 32, 1), loss = 0.0029904, loss1 = 0, loss2 = 0.0029904
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.554, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0.00010551, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.077, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00024062, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.605, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00040625, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.148, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00063825, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.675, size = (1, 32, 32, 1), loss = 18.998, loss1 = 18.997, loss2 = 0.00093826, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.185, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.001359, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.711, size = (1, 32, 32, 1), loss = 18.999, loss1 = 18.997, loss2 = 0.0017886, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.225, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.0022349, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.750, size = (1, 32, 32, 1), loss = 9.8714, loss1 = 9.8688, loss2 = 0.0026097, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.288, size = (1, 32, 32, 1), loss = 9.8718, loss1 = 9.8688, loss2 = 0.0030455, lr=0.01
+[STATS][L2] iter = 11, cost = 2816, time = 16.802, size = (1, 32, 32, 1), loss = 0.0035018, loss1 = 0, loss2 = 0.0035018, lr=0.01
+do I get here
+[STATS][L3](Attack found!) iter = 11, cost = 3072, time = 16.802, size = (1, 32, 32, 1), loss = 0.0035037, loss1 = 0, loss2 = 0.0035037
+Device mapping:
+import_12/Const_166: (Const)Early stopping because we found the adversarial example
+old constant:  50.0
+new constant:  25.0
+finish attack adv shape  (288, 288, 1)
+l2_distortion between inputs and adv  2.5000759634680554
+l2_distortion between inputs and adv_current  2.5000759634680554
+normalized a,b,c 288 288 1
+(1, 288, 288, 3)
+(1, 288, 288, 3)
+perceptual metrics distance between adv and img 0.0029925094
+perceptual metrics distance between adv_current and img 0.0029925094
+normalized perceptual metrics distance between adv and img 1.0390657634060415e-05
+normalized perceptual metrics distance between adv_current and img 1.0390657634060415e-05
+perceptual hash difference is  10
+Saving to id12_differ10_True_l22.50_pdistance0.0029925093986094
+[STATS][L1] total = 13, id = 12, time = 36.266, success = True, const = 100.000000, hash_avg=10.00000, distortion = 2.50008, success_rate = 0.923, l2_avg=4.44197, p_avg=0.008802503817908777, iteration_avg=31.333333333333332
+overall average l2  4.441972859053429
+overal average perceptual distance  0.008802503817908777
+overal average iterations  31.333333333333332
+for image id  13
+each rgb inputs shape  (1, 288, 288, 3)
+each gray inputs shape  (1, 288, 288, 1)
+new image L3 False
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 76.159, loss1 = 76.159, loss2 = 0, lr=0.01
+saving outstep 0 and iteration 0
+[STATS][L2] iter = 1, cost = 256, time = 1.557, size = (1, 32, 32, 1), loss = 66.404, loss1 = 66.404, loss2 = 0.00011511, lr=0.01
+saving outstep 0 and iteration 1
+[STATS][L2] iter = 2, cost = 512, time = 3.071, size = (1, 32, 32, 1), loss = 53.705, loss1 = 53.705, loss2 = 0.00036692, lr=0.01
+saving outstep 0 and iteration 2
+[STATS][L2] iter = 3, cost = 768, time = 4.586, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00064227, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.106, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.00096726, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.625, size = (1, 32, 32, 1), loss = 53.706, loss1 = 53.705, loss2 = 0.0014382, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.144, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.0019082, lr=0.01
+saving outstep 0 and iteration 6
+[STATS][L2] iter = 7, cost = 1792, time = 10.693, size = (1, 32, 32, 1), loss = 37.997, loss1 = 37.995, loss2 = 0.0025649, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.224, size = (1, 32, 32, 1), loss = 37.998, loss1 = 37.995, loss2 = 0.0033643, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.816, size = (1, 32, 32, 1), loss = 37.999, loss1 = 37.995, loss2 = 0.0041357, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.339, size = (1, 32, 32, 1), loss = 19.743, loss1 = 19.738, loss2 = 0.0051137, lr=0.01
+saving outstep 0 and iteration 10
+[STATS][L2] iter = 11, cost = 2816, time = 16.855, size = (1, 32, 32, 1), loss = 19.744, loss1 = 19.738, loss2 = 0.006011, lr=0.01
+[STATS][L2] iter = 12, cost = 3072, time = 18.381, size = (1, 32, 32, 1), loss = 19.745, loss1 = 19.738, loss2 = 0.0072122, lr=0.01
+[STATS][L2] iter = 13, cost = 3328, time = 19.919, size = (1, 32, 32, 1), loss = 0.0086, loss1 = 0, loss2 = 0.0086, lr=0.01
+saving outstep 0 and iteration 13
+[STATS][L3](First valid attack found!) iter = 13, cost = 3584, time = 19.919, size = (1, 32, 32, 1), loss = 0.0086004, loss1 = 0, loss2 = 0.0086004
+Early stopping because we found the adversarial example
+old constant:  100
+new constant:  50.0
+[STATS][L2] iter = 0, cost = 0, time = 0.000, size = (1, 32, 32, 1), loss = 38.08, loss1 = 38.08, loss2 = 0, lr=0.01
+[STATS][L2] iter = 1, cost = 256, time = 1.522, size = (1, 32, 32, 1), loss = 33.202, loss1 = 33.202, loss2 = 0.00011413, lr=0.01
+[STATS][L2] iter = 2, cost = 512, time = 3.067, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00033288, lr=0.01
+[STATS][L2] iter = 3, cost = 768, time = 4.587, size = (1, 32, 32, 1), loss = 26.853, loss1 = 26.852, loss2 = 0.00068113, lr=0.01
+[STATS][L2] iter = 4, cost = 1024, time = 6.112, size = (1, 32, 32, 1), loss = 26.854, loss1 = 26.852, loss2 = 0.0012982, lr=0.01
+[STATS][L2] iter = 5, cost = 1280, time = 7.645, size = (1, 32, 32, 1), loss = 26.855, loss1 = 26.852, loss2 = 0.0020942, lr=0.01
+[STATS][L2] iter = 6, cost = 1536, time = 9.152, size = (1, 32, 32, 1), loss = 19, loss1 = 18.997, loss2 = 0.0028416, lr=0.01
+[STATS][L2] iter = 7, cost = 1792, time = 10.671, size = (1, 32, 32, 1), loss = 19.001, loss1 = 18.997, loss2 = 0.0037112, lr=0.01
+[STATS][L2] iter = 8, cost = 2048, time = 12.211, size = (1, 32, 32, 1), loss = 19.002, loss1 = 18.997, loss2 = 0.0043038, lr=0.01
+[STATS][L2] iter = 9, cost = 2304, time = 13.752, size = (1, 32, 32, 1), loss = 19.002, loss1 = 18.997, loss2 = 0.0050511, lr=0.01
+[STATS][L2] iter = 10, cost = 2560, time = 15.301, size = (1, 32, 32, 1), loss = 19.003, loss1 = 18.997, loss2 = 0.0057771, lr=0.01
+lhost/replica:0/task:0/device:GPU:0
