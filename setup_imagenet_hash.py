@@ -44,7 +44,7 @@ def prime_function(image_set, image):
     differences = []
 
     for i in range(image_set.shape[0]):
-        a.append((imagehash.phash(gen_image(image_set[i])) - imagehash.phash(gen_image(image))) / 8)
+        a.append((imagehash.phash(gen_image(image_set[i])) - imagehash.phash(gen_image(image))) / 8 )
     a = np.asarray(a)
     a = a.astype('float32')
 
@@ -184,7 +184,8 @@ class ImageNet_HashModel:
     def predict1(self, data, data1, method  ):
 
         if method == 'linear':
-            return tf.py_function(pfunction, [data, data1], tf.float32)
+            # return tf.py_function(pfunction, [data, data1], tf.float32)
+            return pfunction(data, data1)
         elif method == 'square':
             return tf.py_function(pfunction_square, [data, data1], tf.float32)
         elif method =='tanh':
