@@ -32,6 +32,26 @@ def gen_image(arr):
 
     return img
 
+def prime_function(image_set, image):
+    '''
+    @param
+    image_set: the source of images
+    image: tested image
+    @return
+    a: the hash difference between image and image_set
+    '''
+    a = []
+    differences = []
+
+    for i in range(image_set.shape[0]):
+        a.append((imagehash.phash(gen_image(image_set[i])) - imagehash.phash(gen_image(image))) / 8)
+    a = np.asarray(a)
+    a = a.astype('float32')
+
+    return a
+
+
+
 def pfunction(arr, arr1):
     a = []
     differences = []
@@ -171,6 +191,8 @@ class ImageNet_HashModel:
             return tf.py_function(pfunction_tanh, [data, data1], tf.float32)
         elif method == 'sigmoid':
             return tf.py_function(pfunction_sigmoid, [data, data1], tf.float32)
+    def compute_hash_distance(self, data, data1):
+        return prime_function(data, data1)
 
     def predict2(self, data, data1):
         return tf.py_function(pfunction_tanh2, [data, data1], tf.float32)
