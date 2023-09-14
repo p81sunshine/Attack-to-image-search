@@ -44,7 +44,7 @@ def prime_function(image_set, image):
     differences = []
 
     for i in range(image_set.shape[0]):
-        a.append((imagehash.phash(gen_image(image_set[i])) - imagehash.phash(gen_image(image))) / 8 )
+        a.append((imagehash.phash(gen_image(image_set[i])) - imagehash.phash(gen_image(image))) / 64 )
     a = np.asarray(a)
     a = a.astype('float32')
 
