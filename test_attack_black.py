@@ -133,7 +133,7 @@ def main(args):
         is_inception = args['dataset'] == "imagenet"
         # load network
         print('Loading model', args['dataset'])
-        data, model = ImageNet(), ImageNet_HashModel(args['hash'], args['bits'], args['factor'])
+        data, model = ImageNet(args["start_idx"], args["numimg"], args["path"]), ImageNet_HashModel(args['hash'], args['bits'], args['factor'])
    
         if args['numimg'] == 0:
             args['numimg'] = len(data.test_labels) - args['firstimg']
@@ -197,15 +197,13 @@ def main(args):
 
         total_time = 0
     
-        for i in range(args['start_idx'], min((args['start_idx'] + 50), all_true_ids.size)):
+        for i in range(args['start_idx'], all_true_ids.size):
         # for i in start_idxs:
             print('for image id ', all_true_ids[i])
             inputs = all_inputs[i:i + 1]
             gray_inputs = all_gray_inputs[i:i+1]
             print('each rgb inputs shape ', inputs.shape)
             print('each gray inputs shape ', gray_inputs.shape)
-            # if len(gray_inputs.shape) == 4:
-            #     gray_inputs = gray_inputs[0]
 
             img_no += 1
         
@@ -400,6 +398,8 @@ if __name__ == "__main__":
     parser.add_argument("--factor", "--hash_string_factor", type=int, default=4)
     parser.add_argument("--maximize", "--if_plus_or_minus", choices=["plus", "minus"], default="minus")
     parser.add_argument("-ht", "--htype", choices=["phash", "blockhash"], default="phash")
+    # Image database path
+    parser.add_argument("-path", "--path", type=str)
     args = vars(parser.parse_args())
     # add some additional parameters
     # learning rate
@@ -429,24 +429,8 @@ if __name__ == "__main__":
             args['init_const'] = 1
     if args['binary_steps'] == 0:
         args['binary_steps'] = 1
-    # set up some parameters based on datasets
-    # if args['dataset'] == "imagenet":
-    #     args['inception'] = True
-    #     args['lr'] = 1e-3
-    #     # args['use_resize'] = True
-    #     # args['save_ckpts'] = True
-    # if args['dataset'] == "maladv" or args['dataset'] == "face":
-    #     args['lr'] = 2e-3
-    # for mnist, using tanh causes gradient to vanish
     if args['dataset'] == "mnist":
         args['use_tanh'] = True
-    # when init_const is not specified, use a reasonable default
-    # if args['init_const'] == 0.0:
-    #     if args['binary_search']:
-    #         args['init_const'] = 0.01
-    #     else:
-    #         args['init_const'] = 0.5
-    # setup random seed
     random.seed(args['seed'])
     np.random.seed(args['seed'])
     print(args)

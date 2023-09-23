@@ -122,9 +122,11 @@ def pfunction_sigmoid(arr, arr1):
     a = a.astype('float32')
     return a
 
-def readimg(ff):
-  f = "./ImageNet_sorted3/"+ff
-  #f = "./ImageNet_sorted/"+ff
+def readimg(path, ff):
+  '''Path: path to the image
+  ff: image name
+  '''
+  f = path + ff
   img = Image.open(f)
   img_gray = img.convert("L")
   img = np.array(img)
@@ -145,27 +147,25 @@ def readimg(ff):
 
 
 class ImageNet:
-  def __init__(self):
-    from multiprocessing import Pool
-    pool = Pool(8)
-    file_list = os.listdir("./ImageNet_sorted3")
-    #file_list = sorted(os.listdir("./ImageNet_sorted/"))
-    # random.seed(2020)
-    # random.shuffle(file_list)
-    r = pool.map(readimg, file_list[:50])
-    # print(file_list[:200])
+  '''
+  From path import `size` number of images.
+  Start from `start` 
+  '''
+  def __init__(self, start,  size, path):
+    file_list = os.listdir(path)
+    file_list.sort()
+    if (start + size > len(file_list)):
+        print("error, out of range in setup_imagenet_hash.py")
+        size = len(file_list) - start
+    r = []
+    for i in range(start, start + size):
+        r.append(readimg(path, file_list[i]))
     r = [x for x in r if x != None]
-    # test_data, test_labels = zip(*r)
    
     test_data, test_data_gray = zip(*r)
-    # print('how do you get labels of', test_labels)
     self.test_data = np.array(test_data)
-    # self.test_labels = np.zeros((len(test_labels), 1001))
     self.test_data_gray = np.array(test_data_gray)
 
-    # self.test_labels[np.arange(len(test_labels)), test_labels] = 1
-    # print('2 imagenet image shape ', self.test_data.shape)
-    # print('2 imagenet image label shape ', self.test_labels.shape)
 
 
 class ImageNet_HashModel:
