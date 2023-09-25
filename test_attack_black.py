@@ -127,6 +127,7 @@ def main(args):
 
     #Only allow a total of half the GPU memory to be allocated
     config.gpu_options.per_process_gpu_memory_fraction = 0.5
+    
 
     with tf.Session(config=config) as sess:
         use_log = not args['use_zvalue']
@@ -173,7 +174,7 @@ def main(args):
                                                                           inception=is_inception)
         # all_gray_inputs_tfomr1, all_gray_inputs_tform2 = generate_transformation(all_gray_inputs)
         print('Done...')
-        os.system("mkdir -p {}/{}".format(args['save'], args['dataset']))
+        os.system("mkdir -p {}".format(args['save']))
         img_no = args["start_idx"]
         total_success = 0
         # l2_total = 0.0
@@ -317,8 +318,11 @@ def main(args):
                     suffix = "id{}_differ{}_{}_l2{:.2f}_pdistance{}".format(all_true_ids[i], hash_differences, success, l2_distortion_direct, distance1[0])
                     print("Saving to", suffix)
     
-                    show(gray_inputs, "{}/{}/{}_original_{}.png".format(args['save'], args['dataset'], img_no,suffix))
-                    show(adv, "{}/{}/{}_adversarial_{}.png".format(args['save'], args['dataset'], img_no, suffix))
+                   # show(gray_inputs, "{}/{}/{}_original_{}.png".format(args['save'], args['dataset'], img_no,suffix))
+                    
+                    show(adv, "{}/{}/{}_adversarial.png".format(args['save'], args['dataset'], data.file_list[img_no]))
+                    show(gray_inputs, "{}/{}/{}_original.png".format(args['save'], args['dataset'], data.file_list[img_no]))
+                   # show(adv, "{}/{}/{}_adversarial_{}.png".format(args['save'], args['dataset'], img_no, suffix))
                     
                     # for name saving purposes, 2nd calculation done
                     print("[STATS][L1] total = {}, id = {}, time = {:.3f}, success = {}, const = {:.6f}, hash_avg={:.5f}, distortion = {:.5f}, success_rate = {:.3f}, l2_avg={:.5f}, p_avg={}, iteration_avg={}"

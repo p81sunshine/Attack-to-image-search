@@ -165,6 +165,7 @@ class ImageNet:
     test_data, test_data_gray = zip(*r)
     self.test_data = np.array(test_data)
     self.test_data_gray = np.array(test_data_gray)
+    self.file_list = file_list
 
 
 
