@@ -7,8 +7,5 @@ if __name__ == "__main__":
     parser.add_argument("-path", "--path", type=str)
     args = vars(parser.parse_args())
     data = ImageNet(0,5, args["path"])
-    print(data.file_list)
-    try:
-        item = data.file_list[4]
-    except IndexError:
-        print(args["path"])
+    if (len(data.test_data) != 5):
+        print("ERROR")
