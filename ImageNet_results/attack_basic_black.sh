@@ -13,6 +13,6 @@ do
   echo $subname
   save="$modifier$subname"
   echo $save
-  python3 ../test_attack_black.py --untargeted -a black -d imagenet --reset_adam -n 5 --solver adam -b 2 -p 1 --hash 20 --use_resize --method "tanh" --batch 256 --gpu 0 --lr 0.01 -s $subname  --start_idx=0 --dist_metrics "pdist" --path $sub_folder --save_ckpts $save 
+  python3 ../test_attack_black.py --untargeted -a black -d imagenet --reset_adam -n 5 --solver adam -b 2 -p 1 --hash 20 --use_resize --method "tanh" --batch 256 --gpu 0,1 --lr 0.01 -s $subname  --start_idx=0 --dist_metrics "pdist" --path $sub_folder --save_ckpts $save 
   
 done

@@ -126,7 +126,8 @@ def readimg(path, ff):
   '''Path: path to the image
   ff: image name
   '''
-  f = path + ff
+  f = path + '/' + ff
+  print(f)
   img = Image.open(f)
   img_gray = img.convert("L")
   img = np.array(img)
@@ -160,12 +161,14 @@ class ImageNet:
     r = []
     for i in range(start, start + size):
         r.append(readimg(path, file_list[i]))
+        file_list[i] = file_list[i][:-5]
     r = [x for x in r if x != None]
    
     test_data, test_data_gray = zip(*r)
     self.test_data = np.array(test_data)
     self.test_data_gray = np.array(test_data_gray)
     self.file_list = file_list
+    print(self.file_list)
 
 
 

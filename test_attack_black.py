@@ -37,7 +37,7 @@ def show(img, name="output.png"):
     """
     Show MNSIT digits in the console.
     """
-    np.save(name, img)
+    #np.save(name, img)
     fig = np.around((img+0.5) * 255)
     fig = fig.astype(np.uint8).squeeze()
     pic = Image.fromarray(fig)
@@ -120,13 +120,11 @@ def main(args):
     #             log_device_placement=True)
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # so the IDs match nvidia-smi
     os.environ["CUDA_VISIBLE_DEVICES"] = args['gpu']  # "0,1,2,3".
-    config = tf.ConfigProto(log_device_placement=True, allow_soft_placement=True)
+    config = tf.ConfigProto(log_device_placement=False, allow_soft_placement=True)
 
     #Don't pre-allocate memory; allocate as-needed
     config.gpu_options.allow_growth = True
 
-    #Only allow a total of half the GPU memory to be allocated
-    config.gpu_options.per_process_gpu_memory_fraction = 0.5
     
 
     with tf.Session(config=config) as sess:
@@ -320,8 +318,11 @@ def main(args):
     
                    # show(gray_inputs, "{}/{}/{}_original_{}.png".format(args['save'], args['dataset'], img_no,suffix))
                     
-                    show(adv, "{}/{}/{}_adversarial.png".format(args['save'], args['dataset'], data.file_list[img_no]))
-                    show(gray_inputs, "{}/{}/{}_original.png".format(args['save'], args['dataset'], data.file_list[img_no]))
+                    show(adv, "{}/{}_attack1.png".format(args['save'], data.file_list[img_no]))
+                    file = open('log.txt', 'a')
+                    file.write('Add image' + data.file_list[img_no] + '\n')
+                    file.close()
+                    #show(gray_inputs, "{}/{}/{}_original.png".format(args['save'], args['dataset'], data.file_list[img_no]))
                    # show(adv, "{}/{}/{}_adversarial_{}.png".format(args['save'], args['dataset'], img_no, suffix))
                     
                     # for name saving purposes, 2nd calculation done
