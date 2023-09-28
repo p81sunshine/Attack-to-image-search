@@ -899,6 +899,14 @@ class BlackBoxL2:
                             np.save(
                                 '{}/best_modifier_{}'.format(self.save_ckpts, name), prev_modifier_saved)
                             o_bestattack2 = nimg
+                        else:
+                            file = open('log.txt', 'a')
+                            file.write("Do not output best_modifier " + name)
+                            file.close()
+                    else:
+                        file = open('log.txt', 'a')
+                        file.write("Do not output best_modifier " + name)
+                        file.close()
 
                 # reset ADAM states when a valid example has been found
                 if loss1 == 0.0 and last_loss1 != 0.0 and self.stage == 0:

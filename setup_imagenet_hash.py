@@ -178,11 +178,18 @@ class ImageNet:
             size = len(file_list) - start
         r = []
         final = []
-        for i in range(start, start + size):
+        num = 0
+        ''' Load size images from path, starting from start
+        If readimg fails, skip the image
+        '''
+        for i in range(start, len(file_list)):
             x = readimg(path, file_list[i])
             if x != None:
                 r.append(x)
                 final.append(file_list[i][:-5])
+                num += 1
+            if num == size:
+                break
         r = [x for x in r if x != None]
 
         test_data, test_data_gray = zip(*r)

@@ -325,10 +325,7 @@ def main(args):
                    # show(gray_inputs, "{}/{}/{}_original_{}.png".format(args['save'], args['dataset'], img_no,suffix))
 
                     show(
-                        adv, "{}/{}_attack1.png".format(args['save'], data.file_list[img_no]))
-                    file = open('log.txt', 'a')
-                    file.write('Add image' + data.file_list[img_no] + '\n')
-                    file.close()
+                        adv, "{}/{}_attack1.png".format(args['save'], data.file_list[i]))
                     # show(gray_inputs, "{}/{}/{}_original.png".format(args['save'], args['dataset'], data.file_list[img_no]))
                    # show(adv, "{}/{}/{}_adversarial_{}.png".format(args['save'], args['dataset'], img_no, suffix))
 
@@ -362,7 +359,7 @@ def main(args):
                     l2_distortion_current, distance2[0], hash_differences_current, success, timeend - timestart)
 #                show(adv_current, "{}/{}/id{}_adv_current_{}.png".format( args['save'], args['dataset'], i, suffix_current))
                 show(
-                    adv_current, "{}/{}_attack1.png".format(args['save'], data.file_list[img_no]))
+                    adv_current, "{}/{}_attack1.png".format(args['save'], data.file_list[i]))
                 print('saving for failed attack current', suffix_current)
                 sys.stdout.flush()
 
